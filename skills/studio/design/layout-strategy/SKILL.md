@@ -105,18 +105,6 @@ Use an 8px base scale religiously. No magic numbers.
 
 **Breathing room:** Generous whitespace isn't wasted space—it reduces cognitive load and draws focus to what matters.
 
-### Visual Design Gets You Hired
-> "Great visual design skill is currently extremely valued. In fact, this is how many employers screen candidates: start with visual work."
-
-Market reality: visual design is screened first due to scarcity. Lead with strong visual work in portfolio. UX thinking matters more long-term, but visual opens doors.
-
-**What "strong visual design" means to hiring managers:**
-- Clean, modern aesthetic
-- Solid typography, spacing, color
-- Attention to visual hierarchy
-- Polish and craft (details matter)
-- Consistent professional quality
-
 ### The Invisible Design Goal
 > "If the boundaries and spaces between thoughts look more important than the spaces themselves, then the typographer has failed."
 
