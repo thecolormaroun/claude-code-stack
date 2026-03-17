@@ -1,6 +1,6 @@
-# Maroun's Claude Code Toolkit
+# Claude Code Toolkit
 
-Everything I use with Claude Code — plugins, skills, custom config, and workflow patterns. This is my personal setup; use it as a reference for what's worth bringing into a team environment.
+My Claude Code setup — plugins, skills, Studio Skill Graph, and config. Curated for shipping high-quality product + design work.
 
 ---
 
@@ -8,24 +8,24 @@ Everything I use with Claude Code — plugins, skills, custom config, and workfl
 
 ### Plugins (12 enabled)
 
-| Plugin | Source | What It Does | Work-Ready? |
-|--------|--------|-------------|-------------|
-| **compound-engineering** | every-marketplace | 29 agents, 22 commands, 19 skills. `/lfg` for full build loops, `/triage` for bugs, parallel PR resolution, design review agents. The big one. | ✅ Yes — framework-agnostic |
+| Plugin | Source | What It Does | Bring to Work? |
+|--------|--------|-------------|----------------|
+| **compound-engineering** | every-marketplace | 29 agents, 22 commands, 19 skills. `/lfg` for full build loops, `/triage` for bugs, parallel PR resolution, design review agents. The big one. | ✅ Yes |
+| **superpowers** | official | Complete dev workflow: brainstorming → spec → plan → TDD → subagent implementation → code review. Forces discipline — no code before spec, no ship before verify. | ✅ Yes — high impact |
 | **code-review** | official | Multi-agent code review with confidence scoring | ✅ Yes |
 | **feature-dev** | official | Structured feature dev workflow (explore → architect → implement → verify) | ✅ Yes |
 | **context7** | official | MCP server for up-to-date library docs (replaces stale training data) | ✅ Yes |
 | **github** | official | GitHub MCP — issues, PRs, reviews, code search from within Claude | ✅ Yes |
-| **playwright** | official | Browser automation + E2E testing via MCP | ✅ Yes |
-| **vercel** | official | Deploy monitoring, log analysis, error detection | ⚠️ If using Vercel |
+| **playwright** | official | Browser automation + E2E testing via Playwright MCP | ⚠️ Consider Agent Browser instead (Vercel Labs, Rust CLI, better for agent workflows) |
 | **ralph-loop** | official | Iterative dev loops (build → screenshot → critique → fix) | ✅ Yes |
 | **frontend-design** | official | UI/UX implementation patterns | ✅ Yes |
-| **superpowers** | official | TDD, debugging, collaboration patterns | ✅ Yes |
 | **commit-commands** | official | Streamlined git commit/push/PR workflow | ✅ Yes |
+| **vercel** | official | Deploy monitoring, log analysis, error detection | ⚠️ Only if using Vercel |
 | **swift-lsp** | official | Swift/Xcode LSP integration | ⚠️ iOS only |
 
-### Custom Skills (Studio Skill Graph — 88 files)
+### Studio Skill Graph (88 files)
 
-My biggest custom asset. A structured knowledge graph for product → design → build workflows.
+Structured knowledge graph for product → design → build workflows.
 
 | Domain | Files | Key Capabilities |
 |--------|-------|-----------------|
@@ -41,6 +41,17 @@ My biggest custom asset. A structured knowledge graph for product → design →
 **Entry point:** `studio.moc.md` → follow domain MOCs as needed.
 
 **Slash commands:** `/braindump`, `/prd`, `/design`, `/copy`, `/ship`, `/lfg`
+
+### Additional Skills
+
+| Skill | What It Does | Bring to Work? |
+|-------|-------------|----------------|
+| **rams** | Accessibility (WCAG) + visual design review | ✅ Yes — essential for any public-facing product |
+| **deslop** | Remove AI-generated code slop (unnecessary comments, defensive checks) | ✅ Yes |
+| **simplify** | Refine code for clarity without changing functionality | ✅ Yes |
+| **react-doctor** | React health audit (performance, security, code quality) | ✅ If using React |
+| **knip** | Find/remove unused files, dependencies, exports | ✅ Yes |
+| **reclaude** | Refactor CLAUDE.md files for progressive disclosure | ✅ Helps teams write better CLAUDE.md |
 
 ### Global Config
 
@@ -61,46 +72,29 @@ My biggest custom asset. A structured knowledge graph for product → design →
 }
 ```
 
-### Additional Skills (~/clawd/skills/)
-
-Skills I've built or installed for OpenClaw that could also work as Claude Code reference:
-
-| Skill | What It Does |
-|-------|-------------|
-| **deslop** | Remove AI-generated code slop (unnecessary comments, defensive checks) |
-| **simplify** | Refine code for clarity without changing functionality |
-| **rams** | Accessibility + visual design review (WCAG compliance) |
-| **react-doctor** | React health audit (performance, security, code quality) |
-| **tdd** | Test-driven development with red-green-refactor loop |
-| **knip** | Find/remove unused files, dependencies, exports |
-| **sentry** | Sentry error monitoring patterns for Next.js |
-| **fix-sentry-issues** | Auto-triage and fix production Sentry issues |
-| **workflow** | Structured execution for complex multi-step tasks |
-| **reclaude** | Refactor CLAUDE.md files for progressive disclosure |
-| **compound-engineering** (custom) | Session review, learning extraction, memory compounding |
-
 ---
 
-## What I'd Bring to Work
+## Recommended Setup for Teams
 
-### Tier 1 — No-brainer, install immediately
-- **compound-engineering plugin** — the `/lfg` loop alone is worth it
-- **code-review plugin** — multi-agent review catches things humans miss
-- **context7 plugin** — stops Claude from using stale API docs
-- **github plugin** — native PR/issue management inside Claude
-- **feature-dev plugin** — structured feature workflow
-- **superpowers plugin** — TDD and debugging patterns
+### Tier 1 — Install immediately
+- **superpowers** — forces spec → plan → TDD → review discipline
+- **compound-engineering** — `/lfg` build loops, parallel PR resolution
+- **code-review** — multi-agent review
+- **context7** — up-to-date library docs
+- **github** — native PR/issue management
+- **feature-dev** — structured feature workflow
+- **rams** — accessibility review (essential for public-facing products)
+- **deslop + simplify** — code quality guardrails
 
-### Tier 2 — High value, needs some adaptation
-- **Studio Skill Graph** — the design system, checklists, and anti-slop rules. Would need to be adapted to Change.org's design system, but the structure is gold.
-- **deslop + simplify skills** — code quality guardrails
-- **Global CLAUDE.md config** — concise planning, anti-slop, visual QA gates
+### Tier 2 — Adapt to your stack
+- **Studio Skill Graph** — design system, checklists, anti-slop rules. Adapt tokens/patterns to your design system.
+- **react-doctor** — if React codebase
+- **knip** — dead code removal
+- **Global CLAUDE.md** — concise planning, anti-slop, visual QA gates
 
-### Tier 3 — Nice to have, context-dependent
+### Tier 3 — Nice to have
 - **ralph-loop** — great for UI iteration, needs screenshot infra
-- **playwright plugin** — if doing E2E testing
-- **vercel plugin** — only if deploying to Vercel
-- **swift-lsp** — only for iOS work
+- **Agent Browser** (Vercel) — better than Playwright plugin for agent automation
 - **commit-commands** — minor convenience
 
 ---
@@ -108,16 +102,16 @@ Skills I've built or installed for OpenClaw that could also work as Claude Code 
 ## Directory Structure
 
 ```
-├── README.md                     # This file
+├── README.md
 ├── config/
 │   ├── CLAUDE.md                 # Global Claude Code config
-│   ├── settings.json             # Plugin enables + hooks
+│   ├── settings.json             # Plugin enables
 │   └── settings.local.json       # Env vars + permissions
 ├── plugins/
 │   └── compound-engineering/     # Third-party plugin (reference)
 │       ├── agents/               # 29 specialized agents
 │       ├── commands/             # 22 slash commands
-│       └── CLAUDE.md             # Plugin instructions
+│       └── CLAUDE.md
 ├── skills/
 │   ├── studio/                   # Studio Skill Graph (88 files)
 │   │   ├── _graph/               # Structured knowledge graph
@@ -129,26 +123,24 @@ Skills I've built or installed for OpenClaw that could also work as Claude Code 
 │   ├── simplify/                 # Code simplification
 │   ├── rams/                     # Accessibility review
 │   ├── react-doctor/             # React health audit
-│   ├── tdd/                      # Test-driven development
 │   ├── knip/                     # Dead code removal
-│   ├── workflow/                 # Multi-step task execution
 │   └── reclaude/                 # CLAUDE.md refactoring
 └── docs/
-    └── setup-guide.md            # How to install this setup
+    └── setup-guide.md
 ```
 
 ---
 
 ## Setup
 
-1. Install Claude Code plugins:
+1. Install plugins:
    ```bash
    claude plugins install compound-engineering@every-marketplace
-   # Official plugins are auto-available — just enable in settings
+   # Official plugins are auto-available — enable in settings
    ```
 
 2. Copy config files to `~/.claude/`
 
 3. Copy skills to your project or `~/.claude/` for global access
 
-4. The Studio Skill Graph works best as a project-level inclusion — drop it in your repo's root or reference via CLAUDE.md
+4. The Studio Skill Graph works best as a project-level inclusion — drop in repo root or reference via CLAUDE.md
