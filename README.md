@@ -1,29 +1,27 @@
 # Claude Code Toolkit
 
-My Claude Code setup — plugins, skills, Studio Skill Graph, and config. Curated for shipping high-quality product + design work.
+My Claude Code setup — plugins, skills, Studio Skill Graph, and config.
 
 ---
 
-## Quick Scan
+## Plugins (12 enabled)
 
-### Plugins (12 enabled)
+| Plugin | Source | What It Does |
+|--------|--------|-------------|
+| **compound-engineering** | every-marketplace | 29 agents, 22 commands, 19 skills. `/lfg` for full build loops, `/triage` for bugs, parallel PR resolution, design review agents. |
+| **superpowers** | official | Complete dev workflow: brainstorming → spec → plan → TDD → subagent implementation → code review. Forces discipline — no code before spec, no ship before verify. |
+| **code-review** | official | Multi-agent code review with confidence scoring |
+| **feature-dev** | official | Structured feature dev workflow (explore → architect → implement → verify) |
+| **context7** | official | MCP server for up-to-date library docs (replaces stale training data) |
+| **github** | official | GitHub MCP — issues, PRs, reviews, code search from within Claude |
+| **agent-browser** | Vercel Labs | Rust CLI + Playwright backend for browser automation. Purpose-built for AI agent workflows — snapshots, structured selectors, headed/headless modes. |
+| **ralph-loop** | official | Iterative dev loops (build → screenshot → critique → fix) |
+| **frontend-design** | official | UI/UX implementation patterns |
+| **commit-commands** | official | Streamlined git commit/push/PR workflow |
+| **vercel** | official | Deploy monitoring, log analysis, error detection |
+| **swift-lsp** | official | Swift/Xcode LSP integration |
 
-| Plugin | Source | What It Does | Bring to Work? |
-|--------|--------|-------------|----------------|
-| **compound-engineering** | every-marketplace | 29 agents, 22 commands, 19 skills. `/lfg` for full build loops, `/triage` for bugs, parallel PR resolution, design review agents. The big one. | ✅ Yes |
-| **superpowers** | official | Complete dev workflow: brainstorming → spec → plan → TDD → subagent implementation → code review. Forces discipline — no code before spec, no ship before verify. | ✅ Yes — high impact |
-| **code-review** | official | Multi-agent code review with confidence scoring | ✅ Yes |
-| **feature-dev** | official | Structured feature dev workflow (explore → architect → implement → verify) | ✅ Yes |
-| **context7** | official | MCP server for up-to-date library docs (replaces stale training data) | ✅ Yes |
-| **github** | official | GitHub MCP — issues, PRs, reviews, code search from within Claude | ✅ Yes |
-| **playwright** | official | Browser automation + E2E testing via Playwright MCP | ⚠️ Consider Agent Browser instead (Vercel Labs, Rust CLI, better for agent workflows) |
-| **ralph-loop** | official | Iterative dev loops (build → screenshot → critique → fix) | ✅ Yes |
-| **frontend-design** | official | UI/UX implementation patterns | ✅ Yes |
-| **commit-commands** | official | Streamlined git commit/push/PR workflow | ✅ Yes |
-| **vercel** | official | Deploy monitoring, log analysis, error detection | ⚠️ Only if using Vercel |
-| **swift-lsp** | official | Swift/Xcode LSP integration | ⚠️ iOS only |
-
-### Studio Skill Graph (88 files)
+## Studio Skill Graph (88 files)
 
 Structured knowledge graph for product → design → build workflows.
 
@@ -42,21 +40,21 @@ Structured knowledge graph for product → design → build workflows.
 
 **Slash commands:** `/braindump`, `/prd`, `/design`, `/copy`, `/ship`, `/lfg`
 
-### Additional Skills
+## Additional Skills
 
-| Skill | What It Does | Bring to Work? |
-|-------|-------------|----------------|
-| **rams** | Accessibility (WCAG) + visual design review | ✅ Yes — essential for any public-facing product |
-| **deslop** | Remove AI-generated code slop (unnecessary comments, defensive checks) | ✅ Yes |
-| **simplify** | Refine code for clarity without changing functionality | ✅ Yes |
-| **react-doctor** | React health audit (performance, security, code quality) | ✅ If using React |
-| **knip** | Find/remove unused files, dependencies, exports | ✅ Yes |
-| **reclaude** | Refactor CLAUDE.md files for progressive disclosure | ✅ Helps teams write better CLAUDE.md |
+| Skill | What It Does |
+|-------|-------------|
+| **rams** | Accessibility (WCAG) + visual design review |
+| **deslop** | Remove AI-generated code slop (unnecessary comments, defensive checks) |
+| **simplify** | Refine code for clarity without changing functionality |
+| **react-doctor** | React health audit (performance, security, code quality) |
+| **knip** | Find/remove unused files, dependencies, exports |
+| **reclaude** | Refactor CLAUDE.md files for progressive disclosure |
 
-### Global Config
+## Global Config
 
 ```jsonc
-// ~/.claude/CLAUDE.md
+// ~/.claude/CLAUDE.md — concise planning, Studio integration, anti-slop
 {
   "Plan Mode": "Extremely concise plans. Questions at end.",
   "Studio Parity": "Auto-consult skill graph for UI work",
@@ -64,38 +62,13 @@ Structured knowledge graph for product → design → build workflows.
   "Visual QA": "Screenshot-compare pass before shipping"
 }
 
-// ~/.claude/settings.local.json
+// ~/.claude/settings.local.json — env overrides
 {
   "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "8000",
-  "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",  // saves tokens
+  "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1",
   "DISABLE_COST_WARNINGS": "1"
 }
 ```
-
----
-
-## Recommended Setup for Teams
-
-### Tier 1 — Install immediately
-- **superpowers** — forces spec → plan → TDD → review discipline
-- **compound-engineering** — `/lfg` build loops, parallel PR resolution
-- **code-review** — multi-agent review
-- **context7** — up-to-date library docs
-- **github** — native PR/issue management
-- **feature-dev** — structured feature workflow
-- **rams** — accessibility review (essential for public-facing products)
-- **deslop + simplify** — code quality guardrails
-
-### Tier 2 — Adapt to your stack
-- **Studio Skill Graph** — design system, checklists, anti-slop rules. Adapt tokens/patterns to your design system.
-- **react-doctor** — if React codebase
-- **knip** — dead code removal
-- **Global CLAUDE.md** — concise planning, anti-slop, visual QA gates
-
-### Tier 3 — Nice to have
-- **ralph-loop** — great for UI iteration, needs screenshot infra
-- **Agent Browser** (Vercel) — better than Playwright plugin for agent automation
-- **commit-commands** — minor convenience
 
 ---
 
@@ -129,14 +102,13 @@ Structured knowledge graph for product → design → build workflows.
     └── setup-guide.md
 ```
 
----
-
 ## Setup
 
 1. Install plugins:
    ```bash
    claude plugins install compound-engineering@every-marketplace
-   # Official plugins are auto-available — enable in settings
+   npm install -g agent-browser && agent-browser install
+   # Official plugins — enable in ~/.claude/settings.json
    ```
 
 2. Copy config files to `~/.claude/`
