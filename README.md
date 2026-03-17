@@ -42,29 +42,17 @@ Structured knowledge graph for product → design → build workflows.
 
 ## Additional Skills
 
-| Skill | What It Does |
-|-------|-------------|
-| **rams** | Accessibility (WCAG) + visual design review |
-| **deslop** | Remove AI-generated code slop (unnecessary comments, defensive checks) |
-| **simplify** | Refine code for clarity without changing functionality |
-| **react-doctor** | React health audit (performance, security, code quality) |
-| **knip** | Find/remove unused files, dependencies, exports |
-| **reclaude** | Refactor CLAUDE.md files for progressive disclosure |
-
-## Design Engineering Skills (Community)
-
-Curated from the design engineering community. Use on a per-project or per-review basis — not always-on.
-
-| Skill | Author | What It Does | Source |
-|-------|--------|-------------|--------|
-| **emil-design-eng** | [Emil Kowalski](https://emilkowal.ski) | Animation decision framework, easing guidelines, spring animations, component polish patterns, Sonner principles, performance rules. The gold standard for animation craft. | [emilkowalski/skill](https://github.com/emilkowalski/skill) |
-| **make-interfaces-feel-better** | [Jakub Krehel](https://x.com/jakubkrehel) | 16 concrete principles: concentric border radius, optical alignment, shadows over borders, interruptible animations, stagger patterns, font smoothing, tabular nums, scale on press, hit areas. Comes with reference files for typography, surfaces, animations, performance. | [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better) |
-| **taste-skill-suite** (4 skills) | [Leonxlnx](https://github.com/Leonxlnx/taste-skill) | **taste-skill**: Frontend design taste — anti-LLM-bias rules, typography, color calibration, layout diversification, motion intensity. **soft-skill**: Premium feel — luxury fonts, spacious whitespace, layered cards, spring animations, floating nav. **redesign-skill**: Upgrade existing projects with modern patterns. **output-skill**: Force AI to write complete code (no placeholders). | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
-
-### Other Notable Skills (not installed, evaluate later)
-
-| Skill | What It Does | Link |
-|-------|-------------|------|
+| Skill | What It Does | Source |
+|-------|-------------|--------|
+| **rams** | Accessibility (WCAG) + visual design review | — |
+| **deslop** | Remove AI-generated code slop (unnecessary comments, defensive checks) | — |
+| **simplify** | Refine code for clarity without changing functionality | — |
+| **react-doctor** | React health audit (performance, security, code quality) | — |
+| **knip** | Find/remove unused files, dependencies, exports | — |
+| **reclaude** | Refactor CLAUDE.md files for progressive disclosure | — |
+| **emil-design-eng** | Animation decision framework, easing guidelines, spring animations, component polish patterns. The gold standard for animation craft. | [emilkowalski/skill](https://github.com/emilkowalski/skill) |
+| **make-interfaces-feel-better** | 16 concrete principles: concentric border radius, optical alignment, shadows over borders, interruptible animations, stagger patterns, font smoothing, tabular nums, scale on press, hit areas. | [jakubkrehel/make-interfaces-feel-better](https://github.com/jakubkrehel/make-interfaces-feel-better) |
+| **taste-skill-suite** (4 skills) | Frontend design taste, premium feel, project redesign, complete code output. Anti-LLM-bias rules, typography, color calibration, layout diversification, motion intensity. | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) |
 | **Impeccable** | Enhanced frontend-design plugin with 17 design commands (`/polish`, `/audit`, `/distill`). Dark mode mastery. | [impeccable.style](https://impeccable.style) |
 | **UI Skills** | 15 independent skills: baseline-ui, fixing-accessibility, fixing-motion-performance, 12 principles of animation, etc. | [ui-skills.com](https://www.ui-skills.com) |
 | **Better Icons** | MCP server + skill for 200k+ icons. Auto-learns your icon library, syncs to project. | [better-auth/better-icons](https://github.com/better-auth/better-icons) |
