@@ -69,7 +69,7 @@ Curated from the design engineering community. Use on a per-project or per-revie
 | **UI Skills** | 15 independent skills: baseline-ui, fixing-accessibility, fixing-motion-performance, 12 principles of animation, etc. | [ui-skills.com](https://www.ui-skills.com) |
 | **Better Icons** | MCP server + skill for 200k+ icons. Auto-learns your icon library, syncs to project. | [better-auth/better-icons](https://github.com/better-auth/better-icons) |
 | **UI Design Brain** | 60+ component best practices from component.gallery. 5 design styles (SaaS, minimal, enterprise, creative, data dashboard). | [carmahhawwari/ui-design-brain](https://github.com/carmahhawwari/ui-design-brain) |
-| **Motion AI Kit** | Motion.dev's official kit ($299/Motion+ membership). Animation expert skill, performance audit, CSS spring generation. | [motion.dev/docs/ai-kit](https://motion.dev/docs/ai-kit) |
+
 
 ## Global Config
 
@@ -115,6 +115,10 @@ Curated from the design engineering community. Use on a per-project or per-revie
 │   ├── emil-design-eng/          # Emil Kowalski's animation & polish craft
 │   ├── make-interfaces-feel-better/ # Jakub Krehel's UI detail principles
 │   ├── taste-skill-suite/        # 4 skills: taste, soft, redesign, output
+│   ├── impeccable/               # 21 Impeccable design skills
+│   ├── ui-skills/                # 4 UI Skills (ibelick)
+│   ├── ui-design-brain/          # 60+ component patterns
+│   ├── better-icons/             # Icon MCP skill
 │   ├── deslop/                   # AI slop removal
 │   ├── simplify/                 # Code simplification
 │   ├── rams/                     # Accessibility review
