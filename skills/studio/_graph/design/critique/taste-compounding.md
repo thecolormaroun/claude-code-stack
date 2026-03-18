@@ -12,8 +12,8 @@ outputs:
   - log_entry: "Appended critique entry in the log"
   - promoted_rules: "New entries in anti-slop.md (weekly, automated)"
 depends_on:
-  - "[[studio.ship.qa.visual-qa-loop]] — source of visual diffs"
-  - "[[studio.ship.qa.two-axis-review]] — source of quality call-outs"
+  - "[[visual-qa-loop]] — source of visual diffs"
+  - "[[two-axis-review]] — source of quality call-outs"
   - "[[studio.design.patterns.premium-interaction-patterns]] §5 (Name It Precisely)"
 feeds_into:
   - "[[studio.design.system.anti-slop]] — rules promoted from patterns"
@@ -141,7 +141,7 @@ Format: YYYY-MM-DD | project | what/why/correct | source
 
 ## Cron Job
 
-The weekly compounding runs via OpenClaw cron:
+The weekly compounding runs via scheduled automation:
 
 ```
 Name: weekly-taste-compounding
@@ -180,6 +180,6 @@ Timeout: 300 seconds
 ## Related
 - [[studio.design.system.anti-slop]] — rules promoted here
 - [[studio.design.patterns.premium-interaction-patterns]] §5 (Name It Precisely)
-- [[studio.ship.qa.visual-qa-loop]] — primary critique source
-- [[studio.ship.qa.two-axis-review]] — secondary critique source
+- [[visual-qa-loop]] — primary critique source
+- [[two-axis-review]] — secondary critique source
 - [[ship.moc]] — Gate 3 of Quality Gates

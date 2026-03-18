@@ -10,7 +10,7 @@ outputs:
   - visual_references: "Collection of specific examples to emulate"
 depends_on:
   - "X bookmarks (design-tagged saves)"
-  - "[[studio.research.taste.user-taste]] — your baseline preferences"
+  - "[[studio.research.taste.user-profile]] — your baseline preferences"
 feeds_into:
   - "[[design.moc]] — taste profile drives visual direction"
   - "[[studio.design.system.creative-direction]] — taste → design tokens"
@@ -21,4 +21,4 @@ feeds_into:
 - [[studio.research.taste.sources]] — where to find inspiration
 - [[studio.research.taste-mining.workflow]] — how to mine and synthesize
 - [[studio.research.taste.profile-template]] — output format
-- [[studio.research.taste.user-taste]] — your curated taste profile (baseline)
+- [[studio.research.taste.user-profile]] — your curated taste profile (baseline)

@@ -19,8 +19,8 @@ depends_on:
   - "[[studio.design.patterns.premium-interaction-patterns]] §3, §5"
   - "[[studio.design.system.anti-slop]]"
 feeds_into:
-  - "[[studio.ship.qa.two-axis-review]] — runs after visual QA passes"
-  - "[[studio.design.critique.taste-compounding]] — all diffs logged to critique log"
+  - "[[two-axis-review]] — runs after visual QA passes"
+  - "[[taste-compounding]] — all diffs logged to critique log"
   - "[[ship.moc]] — Gate 1 of Quality Gates"
 ---
 
@@ -148,10 +148,10 @@ After passing, log everything that was caught to the taste-compounding system:
 
 ```bash
 # Append to ./logs/design-critique-log.md
-# Format: see [[studio.design.critique.taste-compounding]]
+# Format: see [[taste-compounding]]
 ```
 
-See: [[studio.design.critique.taste-compounding]] — Gate 3 in the Quality Gates pipeline.
+See: [[taste-compounding]] — Gate 3 in the Quality Gates pipeline.
 
 ---
 
@@ -159,7 +159,7 @@ See: [[studio.design.critique.taste-compounding]] — Gate 3 in the Quality Gate
 
 | Result | Action |
 |--------|--------|
-| ✅ PASS — zero diffs, all states verified | Proceed to [[studio.ship.qa.two-axis-review]] |
+| ✅ PASS — zero diffs, all states verified | Proceed to [[two-axis-review]] |
 | ❌ FAIL — any diffs remain | Fix and re-loop. Do not proceed. |
 
 **This gate cannot be skipped.** Not for deadlines. Not for "almost done."
@@ -187,6 +187,6 @@ visual-qa-loop:
 - [[studio.design.checklist.visual-qa]] — full checklist (run if no Figma spec)
 - [[studio.design.patterns.premium-interaction-patterns]] §3 (Visual QA Refinement Loop)
 - [[studio.design.patterns.premium-interaction-patterns]] §5 (Name It Precisely)
-- [[studio.design.critique.taste-compounding]] — critique log and weekly rule promotion
-- [[studio.ship.qa.two-axis-review]] — runs after visual QA passes
+- [[taste-compounding]] — critique log and weekly rule promotion
+- [[two-axis-review]] — runs after visual QA passes
 - [[ship.moc]] — Quality Gates section

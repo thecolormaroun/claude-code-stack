@@ -50,7 +50,7 @@ Examples:
 > "The gap between 'close enough' and 'correct' is where polish lives." — Brian Lovin, 2026
 
 Reference: https://brianlovin.com/writing/give-your-agent-a-laboratory-jH5ryjC
-Vault note: [[The Visual QA Refinement Loop]]
+Vault note: [[visual-qa-loop]]
 
 ## 4) Quality Software — The Two-Axis Review Pass
 
@@ -66,7 +66,7 @@ Vault note: [[The Visual QA Refinement Loop]]
 **Rule:** each quadrant should have ≥1 specific call-out in any design review.
 
 Reference: https://brianlovin.com/writing/quality-software-YA7uK4E
-Vault note: [[Quality Software — Two-Axis Framework]]
+Vault note: [[two-axis-review]]
 
 ## 5) Design Critique Standard — Name It Precisely
 
@@ -83,4 +83,4 @@ Vault note: [[Quality Software — Two-Axis Framework]]
 Precise critique compounds into taste. Vague approval produces regression.
 
 Reference: https://brianlovin.com/writing/hiring-design-minded-frontend-engineers-61rbXSV
-Vault note: [[Design Taste as Cultural Artifact]]
+Vault note: [[taste-compounding]]

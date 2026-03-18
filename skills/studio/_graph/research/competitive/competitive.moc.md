@@ -13,7 +13,7 @@ depends_on:
   - "Web search tools (firecrawl, web_fetch)"
 feeds_into:
   - "[[product.moc]] — competitive gaps inform PRD"
-  - "[[studio.product.commercialization.moc]] — pricing intelligence"
+  - "[[commercialization.moc]] — pricing intelligence"
 ---
 
 # Competitive Intel — MOC

@@ -30,11 +30,11 @@ Research feeds both product and design. Run research BEFORE committing to a prod
 
 | Task | Load this |
 |------|-----------|
-| Who are the competitors? | [[studio.research.competitive.moc]] |
-| What should this look/feel like? | [[studio.research.taste-mining.moc]] |
+| Who are the competitors? | [[competitive.moc]] |
+| What should this look/feel like? | [[tastemining.moc]] |
 
 ## Competitive
-- [[studio.research.competitive.moc]] — landscape discovery, deep dives, gap analysis
+- [[competitive.moc]] — landscape discovery, deep dives, gap analysis
 
 ## Taste mining
-- [[studio.research.taste-mining.moc]] — sources, workflow, your taste profile
+- [[tastemining.moc]] — sources, workflow, your taste profile

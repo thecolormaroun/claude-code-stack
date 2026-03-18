@@ -53,7 +53,7 @@ User Request / Voice Dump
 - [[ship.moc]] — handoff, QA, release, execution loops
 
 ## Reference
-- [[studio-graph-readme]] — studio skill graph overview and navigation guide
+- [[README]] — studio skill graph overview and navigation guide
 
 ## Shared (apply across all domains)
 - [[shared.quality-bar]] — definition of "done well"

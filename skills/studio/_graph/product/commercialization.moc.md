@@ -13,7 +13,7 @@ outputs:
   - launch_plan: "Step-by-step launch sequence"
 depends_on:
   - "[[studio.product.prd.prd-outline]] — needs a PRD first"
-  - "[[studio.research.competitive.moc]] — needs competitive context"
+  - "[[competitive.moc]] — needs competitive context"
 feeds_into:
   - "[[ship.moc]] — pricing decisions inform what to build (free tier, paywall, etc.)"
   - "AGENTS.md project queue — monetization decisions"

@@ -38,10 +38,10 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 | Task | Load this |
 |------|-----------|
 | Visual brand direction, colors, mood | [[studio.design.system.creative-direction]] → [[studio.design.system.design-tokens]] |
-| Font choices, type scale | [[studio.design.typography.moc]] |
-| Grid, spacing, responsive rules | [[studio.design.layout.moc]] |
-| Component library, tokens | [[studio.design.designsystem.moc]] |
-| Images, icons, OG images | [[studio.design.assets.moc]] |
+| Font choices, type scale | [[typography.moc]] |
+| Grid, spacing, responsive rules | [[layout.moc]] |
+| Component library, tokens | [[designsystem.moc]] |
+| Images, icons, OG images | [[assets.moc]] |
 | Writing or reviewing UI copy | [[studio.design.copy.moc]] |
 | Pattern-match a UI copy surface | [[studio.design.copy.microcopy-patterns]] |
 | Copy tone for a specific emotional context | [[studio.design.copy.tone-matrix]] |
@@ -50,10 +50,10 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 | Visual QA before shipping | [[studio.design.checklist.visual-qa]] |
 
 ## MOCs (sub-domains)
-- [[studio.design.typography.moc]] — type scale, font pairing, readability
-- [[studio.design.layout.moc]] — grid systems, spacing, responsive
-- [[studio.design.designsystem.moc]] — tokens, components, colors, motion
-- [[studio.design.assets.moc]] — AI-generated visuals, icons, OG images
+- [[typography.moc]] — type scale, font pairing, readability
+- [[layout.moc]] — grid systems, spacing, responsive
+- [[designsystem.moc]] — tokens, components, colors, motion
+- [[assets.moc]] — AI-generated visuals, icons, OG images
 - [[studio.design.copy.moc]] — UX copywriting, microcopy, tone, voice
 
 ## System
@@ -80,12 +80,12 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 ## Checklists
 - [[studio.design.checklist.ui-critique]] — structured design critique
 - [[studio.design.checklist.visual-qa]] — pre-ship quality gate
-- [[studio.ship.qa.visual-qa-loop]] — screenshot → compare → fix protocol (Gate 1)
-- [[studio.ship.qa.two-axis-review]] — 4-quadrant quality score, min 3/5 (Gate 2)
+- [[visual-qa-loop]] — screenshot → compare → fix protocol (Gate 1)
+- [[two-axis-review]] — 4-quadrant quality score, min 3/5 (Gate 2)
 - [[studio.design.copy.checklist]] — pre-ship copy QA (runs alongside visual-qa)
 
 ## Critique & Taste
-- [[studio.design.critique.taste-compounding]] — live critique accumulation → anti-slop rule promotion
+- [[taste-compounding]] — live critique accumulation → anti-slop rule promotion
 
 ## Templates
 - [[studio.design.template.design-brief]] — design brief format

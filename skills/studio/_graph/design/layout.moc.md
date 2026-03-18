@@ -11,7 +11,7 @@ outputs:
   - spacing_scale: "Consistent spacing tokens"
   - responsive_rules: "Breakpoint behavior"
 depends_on:
-  - "[[studio.design.typography.moc]] — type scale influences vertical rhythm"
+  - "[[typography.moc]] — type scale influences vertical rhythm"
 feeds_into:
   - "[[studio.design.system.design-tokens]] — spacing values become tokens"
   - "[[studio.design.system.component-tokens]] — layout rules inform component sizing"

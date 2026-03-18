@@ -13,8 +13,8 @@ outputs:
   - component_specs: "Button, card, input specs with states and variants"
   - token_pack: "Exportable token pack for implementation"
 depends_on:
-  - "[[studio.design.typography.moc]] — type decisions feed tokens"
-  - "[[studio.design.layout.moc]] — spacing decisions feed tokens"
+  - "[[typography.moc]] — type decisions feed tokens"
+  - "[[layout.moc]] — spacing decisions feed tokens"
   - "[[studio.design.system.creative-direction]] — brand drives everything"
 feeds_into:
   - "[[ship.moc]] — tokens and component specs drive implementation"

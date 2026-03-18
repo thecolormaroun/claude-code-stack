@@ -20,8 +20,8 @@ echo "📸 Visual QA — screenshotting: $URL"
 echo "Output: $SCREENSHOT_PATH"
 echo ""
 
-# Try browser tool via openclaw if available
-if command -v openclaw &>/dev/null; then
+# Try browser automation if available
+if command -v playwright &>/dev/null; then
   # Instruct the agent to use browser screenshot
   echo "AGENT_ACTION: browser screenshot $URL"
   echo "SAVE_TO: $SCREENSHOT_PATH"

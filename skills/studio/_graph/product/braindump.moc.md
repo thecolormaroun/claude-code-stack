@@ -14,7 +14,7 @@ feeds_into:
   - "[[studio.product.prd.prd-outline]] — features become PRD inputs"
   - "[[studio.product.prioritization.rice]] — items get RICE scored"
   - "Linear issues — bugs and features get tracked"
-  - "ClawVault tasks — action items get queued"
+  - "task tracker entrys — action items get queued"
 ---
 
 # Brain Dump Processing — MOC

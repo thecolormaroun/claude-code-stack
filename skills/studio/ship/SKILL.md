@@ -75,4 +75,4 @@ claude --dangerously-skip-permissions -p "/lfg Phase 3: Implement V[N] user stor
 - **Always pause for approval** between Phase 2 (PRD) and Phase 4 (Build)
 - **Design phase can be skipped** if using established design system
 - **Budget check** before Phase 4 — estimate cost and confirm with you
-- **Log everything** — lessons, decisions, tasks to ClawVault
+- **Log everything** — lessons, decisions, tasks to your task tracker

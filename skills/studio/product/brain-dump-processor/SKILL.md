@@ -78,7 +78,7 @@ Based on what was extracted:
 | Clear feature set, ready to spec | `prd-writer` → generate PRD + prd.json |
 | Feedback on shipped product | Map to roadmap → generate V(N+1) PRD |
 | Design-heavy request | `visual-direction` or `design-system` skill |
-| Just bugs | Skip PRD, create tasks directly in ClawVault |
+| Just bugs | Skip PRD, create tasks directly in your task tracker |
 | Strategic/vision dump | `roadmap-manager` to update Now/Next/Later |
 
 ### 4. Create Tracking
@@ -86,11 +86,13 @@ Based on what was extracted:
 For every brain dump processed:
 ```bash
 # Create project task
-CLAWVAULT_PATH=./memory clawvault task add "[Project] V[N] — [summary]" \
+# Add task to your tracker (Linear, Jira, GitHub Issues, etc.)
+# Example: gh issue create --title "[Project] V[N] — [summary]" \
   --priority [P] --project [project] --owner studio
 
 # Log the decision to process
-CLAWVAULT_PATH=./memory clawvault remember decision \
+# Log decision to your knowledge base
+# Example: echo "Decision: ..." >> decisions.md \
   "[Project] V[N] scope" --content "Scoped from brain dump: [key decisions]"
 ```
 
@@ -120,5 +122,5 @@ V2 ships → cycle repeats
 ## Integration
 - **Input:** Voice transcripts, text messages, forwarded content
 - **Output:** Structured brief + classification in project specs/
-- **Next:** prd-writer, design dept, roadmap-manager, or direct ClawVault tasks
+- **Next:** prd-writer, design dept, roadmap-manager, or direct task tracker entrys
 - **References:** CPO skill patterns at `./skills/cpo/SKILL.md`

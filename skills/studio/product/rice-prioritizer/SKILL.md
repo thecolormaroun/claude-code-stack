@@ -31,7 +31,7 @@ Also see: `./_graph/product/prioritization/studio.product.prioritization.rice-fi
 
 ### 1. List Candidates
 Gather all features/ideas from:
-- ClawVault tasks tagged #product
+- task tracker entrys tagged #product
 - Brain dump backlog
 - Roadmap items
 

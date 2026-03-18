@@ -69,10 +69,12 @@ Good ideas, not yet prioritized or scoped.
 find ./projects -name "progress.md" -exec sh -c 'echo "=== $1 ===" && head -8 "$1"' _ {} \;
 
 # Studio tasks
-CLAWVAULT_PATH=./memory clawvault task list --status open --owner studio 2>/dev/null | head -20
+# List open tasks from your tracker
+# Example: gh issue list --state open
 
 # Recently completed
-CLAWVAULT_PATH=./memory clawvault task list --status done 2>/dev/null | head -10
+# List completed tasks
+# Example: gh issue list --state closed --limit 10
 ```
 
 ### 2. Update Roadmap

@@ -8,5 +8,5 @@ when_to_use:
 
 # Brain Dump Tracking
 
-- Create a ClawVault task for the project/version.
+- Create a task tracker entry for the project/version.
 - Create a decision when scope is locked.

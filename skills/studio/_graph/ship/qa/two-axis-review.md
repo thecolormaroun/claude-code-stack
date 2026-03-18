@@ -14,12 +14,12 @@ outputs:
   - pass_fail: "PASS (all quadrants ≥ 3/5) or FAIL (any quadrant < 3)"
   - critique_entries: "Issues for the taste-compounding critique log"
 depends_on:
-  - "[[studio.ship.qa.visual-qa-loop]] — must pass before running this"
+  - "[[visual-qa-loop]] — must pass before running this"
   - "[[studio.design.patterns.premium-interaction-patterns]] §4 (Two-Axis Review)"
   - "[[studio.design.checklist.visual-qa]]"
 feeds_into:
   - "PR description — review block goes directly into the PR"
-  - "[[studio.design.critique.taste-compounding]] — critique entries logged"
+  - "[[taste-compounding]] — critique entries logged"
   - "[[ship.moc]] — Gate 2 of Quality Gates"
 ---
 
@@ -178,14 +178,14 @@ Log all issues found (resolved or not) to the critique log:
 
 ```bash
 # Append to ./logs/design-critique-log.md
-# Format: see [[studio.design.critique.taste-compounding]]
+# Format: see [[taste-compounding]]
 ```
 
 ---
 
 ## Related
-- [[studio.ship.qa.visual-qa-loop]] — runs before this (Gate 1)
+- [[visual-qa-loop]] — runs before this (Gate 1)
 - [[studio.design.patterns.premium-interaction-patterns]] §4 (Two-Axis Review)
 - [[studio.design.patterns.premium-interaction-patterns]] §5 (Name It Precisely)
-- [[studio.design.critique.taste-compounding]] — critique log and weekly rule promotion
+- [[taste-compounding]] — critique log and weekly rule promotion
 - [[ship.moc]] — Quality Gates section
