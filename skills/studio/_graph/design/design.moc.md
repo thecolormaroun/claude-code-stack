@@ -64,6 +64,7 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 - [[studio.design.patterns.design-with-taste]] — how to make opinionated design decisions
 - [[studio.design.patterns.motion-design-patterns]] — Motion.dev patterns
 - [[studio.design.patterns.premium-interaction-patterns]] — premium feel heuristics
+- [[human-processor-model]] — scientific timing reference (70ms cognitive cycle, Card/Moran/Newell)
 
 ## Copy
 - [[studio.design.copy.moc]] — UX copywriting entry point (load this first for any copy work)
