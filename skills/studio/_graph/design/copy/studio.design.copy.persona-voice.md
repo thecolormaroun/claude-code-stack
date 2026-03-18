@@ -1,7 +1,7 @@
 ---
 id: studio.design.copy.persona-voice
 name: Persona Voice Guide
-description: Template for defining project-specific voice. Slot in project personas here when Maroun defines them. Includes a worked example.
+description: Template for defining project-specific voice. Slot in project personas here when you defines them. Includes a worked example.
 when_to_use: When copy needs to match a specific product persona or brand voice.
 ---
 
@@ -76,15 +76,15 @@ Reference: [e.g., Ina Garten, a brilliant chef friend, a calm ER doctor]
 
 ---
 
-## Example: Noah's Noms Voice Guide
+## Example: Recipe App Voice Guide
 
-*(Worked example for Maroun's active project — family meal planning app)*
+*(Worked example for your active project — family meal planning app)*
 
 ### Brand Personality
 Warm, practical, a little playful, parent-smart, never preachy.
 
 ### Voice Statement
-"Noah's Noms sounds like your friend who's a great cook and a parent — they know feeding kids is hard, they don't judge, and they always have a good idea ready."
+"Recipe App sounds like your friend who's a great cook and a parent — they know feeding kids is hard, they don't judge, and they always have a good idea ready."
 
 ### This brand IS / IS NOT
 
@@ -167,7 +167,7 @@ Never let Role 2 voice bleed into Role 1 surfaces.
 
 ## Registering a New Project Persona
 
-When Maroun starts a new project:
+When you starts a new project:
 1. Duplicate the template section
 2. Name it with the project name
 3. Fill in personality, dials, vocabulary, and examples

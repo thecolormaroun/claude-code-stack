@@ -15,4 +15,4 @@ when_to_use:
 - Every visual choice should have a reason
 - No "dead UI" (teleporting elements, static transitions everywhere) — apply [[studio.design.patterns.design-with-taste]]
 
-### Screenshot-Compare QA Pass *(added 2026-03-15 from critique log)* - Every component shipment requires a visual diff/screenshot-compare pass before production. This catches spacing drift, alignment shifts, and visual regressions that code review misses. - Triggered by: 2 instances across noah-noms, studio projects - Source issues: Noah's Noms skipped visual QA loop on initial build; Studio design-digest flagged missing diff loops
+### Screenshot-Compare QA Pass *(added 2026-03-15 from critique log)* - Every component shipment requires a visual diff/screenshot-compare pass before production. This catches spacing drift, alignment shifts, and visual regressions that code review misses. - Triggered by: 2 instances across example-project, studio projects - Source issues: Example Project skipped visual QA loop on initial build; Studio design-digest flagged missing diff loops

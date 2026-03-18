@@ -13,4 +13,4 @@ applies_to: "All Studio domains — product, design, research, ship"
 - When proposing edits, keep changes small and reviewable.
 - Default to: progressive disclosure (start with MOC, then drill down).
 - Every output should be immediately useful — not "here's a framework, go figure it out."
-- If the output wouldn't impress Maroun, iterate before delivering.
+- If the output wouldn't impress you, iterate before delivering.

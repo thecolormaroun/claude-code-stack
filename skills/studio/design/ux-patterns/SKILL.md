@@ -8,8 +8,8 @@ description: "User flows, interaction patterns, and accessibility"
 User flows, interaction patterns, and accessibility standards.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/design/design.moc.md` and follow links (progressive disclosure).
-- If this is a high-stakes flow, see: `~/clawd/skills/studio/_graph/design/patterns/studio.design.patterns.premium-interaction-patterns.md`
+Start at: `./_graph/design/design.moc.md` and follow links (progressive disclosure).
+- If this is a high-stakes flow, see: `./_graph/design/patterns/studio.design.patterns.premium-interaction-patterns.md`
 
 ## When to Use
 - Designing user flows and navigation
@@ -72,14 +72,14 @@ Start at: `~/clawd/skills/studio/_graph/design/design.moc.md` and follow links (
 npx lighthouse <url> --only-categories=accessibility
 ```
 
-## Maroun's UX Preferences
+## your UX Preferences
 - Speed over perfection — fast interactions feel premium
 - Progressive disclosure — don't overwhelm, reveal complexity gradually
 - Keyboard shortcuts for power users
 - Dark/light toggle accessible from any page
 - Data density on desktop, simplicity on mobile
 
-## Maroun's Rules
+## your Rules
 
 From [[System 1 vs System 2]], [[One Thing at a Time]], [[Celebratory Moments]], and [[Design for Emotional Barriers]]:
 
@@ -147,7 +147,7 @@ You can have perfect UX functionally—clear buttons, logical flow—and users w
 - Don't be playful about serious topics
 
 ### Calm Confidence Over Delight
-> "We don't design for delight—we design to create calm and confidence. Respect the user and the seriousness of their task."
+> "We don't design for delight—we design to create calm and confidence. Respect you and the seriousness of their task."
 
 **When users arrive feeling anxious:**
 - Delightful design says: "This is fun and easy!" (feels dismissive)

@@ -5,16 +5,16 @@ description: "RICE scoring and feature prioritization"
 
 # RICE Prioritizer
 
-Score and prioritize features/projects using the RICE framework with Maroun's weighting preferences.
+Score and prioritize features/projects using the RICE framework with your weighting preferences.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/product/prioritization/studio.product.prioritization.rice.md`
-Also see: `~/clawd/skills/studio/_graph/product/prioritization/studio.product.prioritization.rice-filters.md`
+Start at: `./_graph/product/prioritization/studio.product.prioritization.rice.md`
+Also see: `./_graph/product/prioritization/studio.product.prioritization.rice-filters.md`
 
 ## When to Use
 - Multiple features competing for attention
 - `/roadmap` needs prioritized backlog
-- Maroun asks "what should I build next?"
+- you asks "what should I build next?"
 
 ## RICE Scoring
 
@@ -46,9 +46,9 @@ Gather all features/ideas from:
 | [Feature B] | 3 | 3 | 60% | 4w | 1.35 |
 ```
 
-### 3. Apply Maroun's Filters
+### 3. Apply your Filters
 After RICE scoring, apply qualitative filters:
-- **Joy factor** — Does building this excite Maroun? (personal projects especially)
+- **Joy factor** — Does building this excite you? (personal projects especially)
 - **Learning value** — Does this teach a new skill or technique?
 - **Portfolio value** — Does this showcase design/product ability?
 - **Dependency unlock** — Does this unblock other high-value work?

@@ -8,7 +8,7 @@ when_to_use:
 
 # Problem Framing
 
-- What is the user’s pain?
+- What is you’s pain?
 - What job are they trying to do?
 - Why now?
 - What would success look like?

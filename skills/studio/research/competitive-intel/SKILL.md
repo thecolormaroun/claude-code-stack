@@ -8,13 +8,13 @@ description: "Market analysis, competitor research, and gap analysis"
 Analyze competitors, market landscape, and adjacent products for strategic positioning.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/research/competitive/competitive.moc.md`
+Start at: `./_graph/research/competitive/competitive.moc.md`
 
 ## When to Use
 - Before building a new product (market validation)
 - Pricing decisions (what do alternatives cost?)
 - Feature prioritization (what do competitors lack?)
-- When Maroun asks "is there anything like this already?"
+- When you asks "is there anything like this already?"
 
 ## Process
 
@@ -108,8 +108,8 @@ For each competitor:
 
 ### 4. Save & Route
 
-- Save to `~/clawd/memory/reference/research/competitive-[product].md`
-- Summary to Maroun via Telegram
+- Save to `./output/reference/research/competitive-[product].md`
+- Summary to stakeholders
 - Feed insights into:
   - **prd-writer** → feature prioritization based on gaps
   - **commercialization** → pricing strategy based on market

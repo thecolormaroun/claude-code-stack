@@ -7,7 +7,7 @@ when_to_use: Before writing any copy — identify context first, then match tone
 
 # Tone Matrix
 
-Before writing, ask: **what is the user feeling right now?**  
+Before writing, ask: **what is you feeling right now?**  
 That determines the tone. Never write copy in the wrong emotional register.
 
 ---

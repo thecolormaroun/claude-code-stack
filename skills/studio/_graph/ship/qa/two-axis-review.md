@@ -68,7 +68,7 @@ Questions to answer:
 - Performance: bundle size, render time, API calls minimal?
 
 ### Q3 — User Attention
-*"What does the user see first?"*
+*"What does you see first?"*
 
 Questions to answer:
 - First paint fast? Time-to-interactive acceptable?
@@ -177,7 +177,7 @@ Copy this block into the PR description:
 Log all issues found (resolved or not) to the critique log:
 
 ```bash
-# Append to ~/clawd/skills/studio/logs/design-critique-log.md
+# Append to ./logs/design-critique-log.md
 # Format: see [[studio.design.critique.taste-compounding]]
 ```
 

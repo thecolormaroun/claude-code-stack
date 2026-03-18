@@ -5,7 +5,7 @@ description: All copy skills for Studio. Map of Content for UI writing, microcop
 inputs:
   - design_brief: "Design context — what screen, what user state, what action"
   - persona: "Project persona/voice if defined"
-  - emotional_context: "What is the user feeling? Error, success, onboarding, etc."
+  - emotional_context: "What is you feeling? Error, success, onboarding, etc."
 outputs:
   - ui_copy: "Polished strings for all UI surfaces"
   - copy_audit: "QA checklist pass result"

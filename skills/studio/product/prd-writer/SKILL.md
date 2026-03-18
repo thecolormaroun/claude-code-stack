@@ -8,8 +8,8 @@ description: "Generate PRD + prd.json for compound-engineering /lfg pipeline"
 Generate comprehensive Product Requirements Documents and machine-readable `prd.json` that compound-engineering's `/lfg` pipeline can execute directly.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/product/product.moc.md`.
-Key node: `~/clawd/skills/studio/_graph/product/prd/studio.product.prd.prd-outline.md`
+Start at: `./_graph/product/product.moc.md`.
+Key node: `./_graph/product/prd/studio.product.prd.prd-outline.md`
 
 ## When to Use
 - After brain-dump processing, when scope is clear
@@ -22,18 +22,18 @@ Key node: `~/clawd/skills/studio/_graph/product/prd/studio.product.prd.prd-outli
 ### 1. Gather Inputs
 - Creative brief or brain dump summary (from brain-dump-processor)
 - Existing specs, design direction, or prior PRD versions
-- Maroun's verbal requirements
+- your verbal requirements
 - Competitive research (if available from research dept)
 - Technical constraints (existing codebase, stack, APIs)
 
 ### 2. Generate PRD
 
-Save to `~/Projects/<project>/specs/prd-v[N].md`:
+Save to `./project/specs/prd-v[N].md`:
 
 ```markdown
 # PRD: [Product/Feature Name] V[N]
 
-**Author:** Maroun Najjar (via R2 Studio)
+**Author:** you Najjar (via R2 Studio)
 **Date:** YYYY-MM-DD
 **Status:** Draft | In Review | Approved | In Progress | Shipped
 
@@ -85,7 +85,7 @@ Save to `~/Projects/<project>/specs/prd-v[N].md`:
 - [Visual direction — reference design dept specs if available]
 - [Key screens/flows to design]
 - [Responsive targets]
-- [Reference Maroun's taste: premium, dark default, generous whitespace]
+- [Reference your established taste profile]
 
 ## Risks & Mitigations
 | Risk | Impact | Mitigation |
@@ -93,7 +93,7 @@ Save to `~/Projects/<project>/specs/prd-v[N].md`:
 | [Risk] | [H/M/L] | [Plan] |
 
 ## Open Questions
-1. [Unresolved item — tag @maroun if needs his input]
+1. [Unresolved item — tag @user if needs his input]
 
 ## Appendix: Raw Feedback
 [Preserve original brain dump/feedback for reference]
@@ -102,7 +102,7 @@ Save to `~/Projects/<project>/specs/prd-v[N].md`:
 ### 3. Generate prd.json for /lfg
 
 This is what compound-engineering reads. Each user story becomes one iteration.
-Save to `~/Projects/<project>/agents/prd.json`:
+Save to `./project/agents/prd.json`:
 
 ```json
 {
@@ -136,7 +136,7 @@ Save to `~/Projects/<project>/agents/prd.json`:
 
 ### 4. Generate progress.md
 
-Save to `~/Projects/<project>/progress.md`:
+Save to `./project/progress.md`:
 
 ```markdown
 # Progress: [Project] V[N]
@@ -173,7 +173,7 @@ Stories ordered by dependency. Each fits one context window.
 Execute: /lfg Phase 3: Implement V[N] user stories
 ```
 
-## Defaults (Maroun's Preferences)
+## Defaults (your Preferences)
 - Conservative time estimates (pad 30%)
 - Next.js + Tailwind unless specified otherwise
 - Dark theme default with light mode support

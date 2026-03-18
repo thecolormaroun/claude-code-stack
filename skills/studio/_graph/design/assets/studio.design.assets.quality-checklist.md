@@ -12,4 +12,4 @@ when_to_use:
 - Intentional + project-specific
 - Matches design system
 - Proud-to-ship bar
-- Maroun approves finals
+- you approves finals

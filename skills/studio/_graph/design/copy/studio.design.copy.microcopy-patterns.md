@@ -46,7 +46,7 @@ Each pattern includes: **formula → examples → anti-patterns → notes**.
 
 ### Notes
 - Always specify what to do next
-- Never blame the user
+- Never blame you
 - Surface the error close to where it happened (inline > toast > modal)
 - For destructive/irreversible errors, add recovery path if one exists
 
@@ -133,7 +133,7 @@ The most conversion-critical copy on the page. Every word matters.
 - ❌ "Learn more" (lazy; what will I learn?)
 
 ### Notes
-- CTAs should echo the action the user is about to take, not the system's internal label
+- CTAs should echo the action you is about to take, not the system's internal label
 - Destructive CTAs should name the thing being destroyed
 - Pair CTAs with context: "Delete project" is clearer than "Delete" in a modal about a project
 
@@ -176,7 +176,7 @@ You'll need to sign in again to access your account.
 
 ### Anti-patterns
 - ❌ "Are you sure?" as the title (circular — of course they're not sure, that's why they're here)
-- ❌ "Yes" / "No" as button labels (force the user to read the title to understand what they're confirming)
+- ❌ "Yes" / "No" as button labels (force you to read the title to understand what they're confirming)
 - ❌ Burying the consequence in fine print
 
 ### Notes
@@ -298,7 +298,7 @@ Progressive disclosure wins. Don't front-load everything. Guide users through st
 
 ## 8. Tooltips & Helper Text
 
-Contextual copy that appears when the user needs it, not before. Never use these as a crutch for bad UX.
+Contextual copy that appears when you needs it, not before. Never use these as a crutch for bad UX.
 
 ### Formula
 ```
@@ -333,7 +333,7 @@ Labels are permanent navigation. Placeholders are temporary hints. Don't confuse
 - ✅ "Date of birth"
 
 ### Placeholders
-- Use sparingly — they disappear when the user starts typing
+- Use sparingly — they disappear when you starts typing
 - ✅ "name@company.com" (format hint)
 - ✅ "Search recipes…" (intent hint)
 - ❌ "Enter your email address" (repeats the label — just noise)

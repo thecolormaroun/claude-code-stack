@@ -5,10 +5,10 @@ description: "Design tokens, component patterns, colors, and motion"
 
 # Design System
 
-Design tokens, component library patterns, and interaction states. These are Maroun's **default starting tokens** — use them directly for personal projects, or use the CDO visual-direction skill (`~/clawd/skills/cdo/visual-direction/SKILL.md`) to create custom palettes from scratch.
+Design tokens, component library patterns, and interaction states. These are your **default starting tokens** — use them directly for quick starts, or use the CDO visual-direction skill (`./cdo/visual-direction/SKILL.md`) to create custom palettes from scratch.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/design/designsystem.moc.md`
+Start at: `./_graph/design/designsystem.moc.md`
 
 ## When to Use
 - Starting a new project that needs consistent design language
@@ -21,7 +21,7 @@ Start at: `~/clawd/skills/studio/_graph/design/designsystem.moc.md`
 3. **Customize type?** → Load typography skill for font pairing and scale adjustments
 4. **Layout decisions?** → Load layout-strategy skill for grid and spacing
 5. **Generate `tailwind.config.js`** with all tokens combined
-6. Save project tokens to `~/Projects/<project>/design-tokens.css`
+6. Save project tokens to `./project/design-tokens.css`
 
 ## Color Tokens
 
@@ -109,13 +109,13 @@ Use Motion.dev (`motion/react`) for React animations. Never CSS animations for c
 - Every visual choice should have a reason
 
 ## Related Skills
-- **CDO visual-direction** (`~/clawd/skills/cdo/visual-direction/`) — Deep custom color/brand direction from scratch
-- **typography** (`~/clawd/skills/studio/design/typography/`) — Font pairing, type scale, readability
-- **layout-strategy** (`~/clawd/skills/studio/design/layout-strategy/`) — Grid, spacing, responsive
-- **ux-patterns** (`~/clawd/skills/studio/design/ux-patterns/`) — Interaction patterns, accessibility
-- **asset-generation** (`~/clawd/skills/studio/design/asset-generation/`) — AI-generated visuals
+- **CDO visual-direction** (`./cdo/visual-direction/`) — Deep custom color/brand direction from scratch
+- **typography** (`./design/typography/`) — Font pairing, type scale, readability
+- **layout-strategy** (`./design/layout-strategy/`) — Grid, spacing, responsive
+- **ux-patterns** (`./design/ux-patterns/`) — Interaction patterns, accessibility
+- **asset-generation** (`./design/asset-generation/`) — AI-generated visuals
 
-## Maroun's Rules
+## your Rules
 
 From [[Atomic Design]], [[Build Once Use Everywhere]], and [[Systems and Modularity Lead to Quality at Scale]]:
 

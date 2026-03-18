@@ -37,4 +37,4 @@ Research feeds both product and design. Run research BEFORE committing to a prod
 - [[studio.research.competitive.moc]] — landscape discovery, deep dives, gap analysis
 
 ## Taste mining
-- [[studio.research.taste-mining.moc]] — sources, workflow, Maroun's taste profile
+- [[studio.research.taste-mining.moc]] — sources, workflow, your taste profile

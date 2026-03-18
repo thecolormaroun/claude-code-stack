@@ -5,7 +5,7 @@ name: Design (MOC)
 description: Entry point for Studio design knowledge (patterns, heuristics, checklists, templates).
 inputs:
   - design_brief: "Product brief or PRD from product.moc or CPO skill"
-  - taste_profile: "Maroun's curated taste profile from research.moc/tastemining"
+  - taste_profile: "your curated taste profile from research.moc/tastemining"
   - user_request: "Direct design request (/design, /typography, /layout, etc.)"
 outputs:
   - design_spec: "Component specs, interaction patterns, spacing/color decisions"
@@ -23,7 +23,7 @@ triggers:
   - "/copy-qa — run the copy QA checklist"
 depends_on:
   - "[[product.moc]] — needs product brief before designing"
-  - "[[research.moc]] tastemining — pulls Maroun's taste profile"
+  - "[[research.moc]] tastemining — pulls your taste profile"
 feeds_into:
   - "[[ship.moc]] — design spec becomes implementation input"
   - "coding-agent skill — component specs guide implementation"
@@ -58,7 +58,7 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 
 ## System
 - [[studio.design.system.design-tokens]] — canonical token definitions
-- [[studio.design.system.creative-direction]] — Maroun's design taste and brand philosophy
+- [[studio.design.system.creative-direction]] — your design taste and brand philosophy
 
 ## Patterns
 - [[studio.design.patterns.design-with-taste]] — how to make opinionated design decisions

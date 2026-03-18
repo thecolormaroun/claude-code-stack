@@ -9,7 +9,7 @@ when_to_use:
 
 # UI Critique Checklist
 
-1) What job is the user trying to do?
+1) What job is you trying to do?
 2) What anxiety exists here? (irreversibility, money, identity, publicness)
 3) Are we carrying cognitive load?
 4) Is the hierarchy obvious in 3 seconds?

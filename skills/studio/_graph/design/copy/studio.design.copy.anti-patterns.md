@@ -67,7 +67,7 @@ Copy that sounds like it was written by the system about itself, not by a human 
 
 ## 4. Over-Apologizing
 
-Excessive apology signals low confidence and wastes the user's attention on your feelings.
+Excessive apology signals low confidence and wastes you's attention on your feelings.
 
 | Anti-pattern | Why it fails | Fix |
 |-------------|--------------|-----|
@@ -130,7 +130,7 @@ The most common lazy pattern in product development.
 
 ## 8. Placeholder Text as Instructions
 
-Placeholders disappear when the user starts typing. Critical instructions must not live there.
+Placeholders disappear when you starts typing. Critical instructions must not live there.
 
 | Anti-pattern | Why it fails | Fix |
 |-------------|--------------|-----|

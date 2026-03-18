@@ -5,10 +5,10 @@ description: "Now/Next/Later project planning and portfolio management"
 
 # Roadmap Manager
 
-Maintain living roadmaps with Now/Next/Later planning across all of Maroun's projects.
+Maintain living roadmaps with Now/Next/Later planning across all of your projects.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/product/roadmap/roadmap.moc.md`
+Start at: `./_graph/product/roadmap/roadmap.moc.md`
 
 ## When to Use
 - `/roadmap` command
@@ -19,12 +19,12 @@ Start at: `~/clawd/skills/studio/_graph/product/roadmap/roadmap.moc.md`
 
 ## Framework: Now / Next / Later
 
-Living roadmap at `~/clawd/memory/reference/studio-roadmap.md`.
+Living roadmap at `./output/reference/studio-roadmap.md`.
 
 See graph nodes:
-- `~/clawd/skills/studio/_graph/product/roadmap/studio.product.roadmap.now-next-later.md`
-- `~/clawd/skills/studio/_graph/product/roadmap/studio.product.roadmap.capacity-rules.md`
-- `~/clawd/skills/studio/_graph/product/roadmap/studio.product.roadmap.update-process.md`
+- `./_graph/product/roadmap/studio.product.roadmap.now-next-later.md`
+- `./_graph/product/roadmap/studio.product.roadmap.capacity-rules.md`
+- `./_graph/product/roadmap/studio.product.roadmap.update-process.md`
 
 Template:
 
@@ -66,13 +66,13 @@ Good ideas, not yet prioritized or scoped.
 ### 1. Gather Current State
 ```bash
 # Active projects with progress files
-find ~/Projects -name "progress.md" -exec sh -c 'echo "=== $1 ===" && head -8 "$1"' _ {} \;
+find ./projects -name "progress.md" -exec sh -c 'echo "=== $1 ===" && head -8 "$1"' _ {} \;
 
 # Studio tasks
-CLAWVAULT_PATH=~/clawd/memory clawvault task list --status open --owner studio 2>/dev/null | head -20
+CLAWVAULT_PATH=./memory clawvault task list --status open --owner studio 2>/dev/null | head -20
 
 # Recently completed
-CLAWVAULT_PATH=~/clawd/memory clawvault task list --status done 2>/dev/null | head -10
+CLAWVAULT_PATH=./memory clawvault task list --status done 2>/dev/null | head -10
 ```
 
 ### 2. Update Roadmap
@@ -83,15 +83,15 @@ CLAWVAULT_PATH=~/clawd/memory clawvault task list --status done 2>/dev/null | he
 - **Prune:** Remove items that are no longer relevant (log why)
 
 ### 3. Capacity Check
-Maroun is a solo builder on parental leave with limited time:
+you is a solo builder on parental leave with limited time:
 - **Max 1 active build** in NOW at a time
 - **Max 2-3 items** in NEXT (don't overcommit)
 - When estimating, account for: baby interruptions, energy levels, context switching cost
 - Prefer small, shippable increments over ambitious multi-week builds
 
 ### 4. Save & Communicate
-- Save roadmap → `~/clawd/memory/reference/studio-roadmap.md`
-- Send summary to Maroun via Telegram if significant changes
+- Save roadmap → `./output/reference/studio-roadmap.md`
+- Send summary to you to the team if significant changes
 - Integrate with Sunday weekly life review (life-review-council skill)
 
 ## Cadence

@@ -23,7 +23,7 @@ depends_on:
 feeds_into:
   - "GitHub PRs — code review and merge"
   - "Linear issues — status updates"
-  - "Telegram — progress notifications to Maroun"
+  - "Messaging channel for progress updates"
 ---
 
 # Ship — MOC
@@ -54,7 +54,7 @@ Before creating a PR, run these gates in order:
 Load [[studio.ship.qa.visual-qa-loop]] and execute the screenshot → compare → fix loop.
 Do not proceed until zero visual diffs remain.
 
-Run: `~/clawd/skills/studio/scripts/visual-qa.sh [URL]`
+Run: `./scripts/visual-qa.sh [URL]`
 
 ### Gate 2: Two-Axis Review
 Load [[studio.ship.qa.two-axis-review]] and score all 4 quadrants:
@@ -64,7 +64,7 @@ Paste the review block into the PR description.
 
 ### Gate 3: Critique Log
 Log all critiques found during Gates 1–2 to the design critique log using "Name It Precisely" format.
-Append to: `~/clawd/skills/studio/logs/design-critique-log.md`
+Append to: `./logs/design-critique-log.md`
 See [[studio.design.critique.taste-compounding]] for format.
 
 **These gates are not optional.** Not for deadlines. Not for small features.

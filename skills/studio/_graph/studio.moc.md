@@ -7,7 +7,7 @@ inputs:
   - prd_json: "Optional — prd.json file from CPO skill for /lfg execution"
 outputs:
   - artifacts: "PRD, design spec, shipped code, or QA checklist depending on pipeline stage"
-  - progress_update: "Telegram summary of what was done"
+  - progress_update: "Summary of what was done"
 triggers:
   - "/braindump — product brain dump → CPO → PRD"
   - "/prd — generate PRD from brief"
@@ -23,7 +23,7 @@ depends_on:
   - "coding-agent skill (for implementation)"
 feeds_into:
   - "Shipped product features"
-  - "Obsidian vault (artifacts saved to ~/Vault/00 Inbox/)"
+  - "Obsidian vault (artifacts saved to ./vault/00 Inbox/)"
   - "Linear issues (progress tracked)"
 ---
 

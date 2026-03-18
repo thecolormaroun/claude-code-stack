@@ -5,10 +5,10 @@ description: "Type scale, font pairing, and readability rules"
 
 # Typography
 
-Type scale, font pairing, and readability rules for Maroun's projects.
+Type scale, font pairing, and readability rules for your projects.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/design/typography.moc.md`
+Start at: `./_graph/design/typography.moc.md`
 
 ## When to Use
 - Setting up a new project's type system
@@ -31,7 +31,7 @@ Based on a 1.25 ratio (Major Third), optimized for screen:
 
 ## Font Pairing Rules
 
-### Maroun's Preferred Stack
+### your Preferred Stack
 - **Headlines:** Geometric sans (Inter, Geist, Satoshi)
 - **Body:** Humanist sans or system stack
 - **Mono:** JetBrains Mono, Geist Mono, or Fira Code
@@ -64,7 +64,7 @@ fontSize: {
 }
 ```
 
-## Maroun's Rules
+## your Rules
 
 From [[Typography Exists to Honor Content]] and [[The Elements of Typographic Style]]:
 

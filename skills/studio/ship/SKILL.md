@@ -8,11 +8,11 @@ description: "Full pipeline: braindump → PRD → design → build"
 Run the complete Studio pipeline from raw idea to shipped product.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/studio.moc.md` then follow domain MOCs.
+Start at: `./_graph/studio.moc.md` then follow domain MOCs.
 
 ## When to Use
 - `/ship [idea or voice dump]`
-- When Maroun wants end-to-end execution
+- When you wants end-to-end execution
 
 ## Pipeline
 
@@ -37,17 +37,17 @@ To keep Studio linear and compounding, every run must write at least one durable
 **If single-department:**
 - Write a short output note (brief/spec/checklist) that can be used as input later.
 
-Artifacts should be referenced/linked in the Telegram summary.
+Artifacts should be referenced/linked in the Summary.
 
 ### Phase 1: Brain Dump Processing
 Load `brain-dump-processor` skill. Extract and classify all items from the input.
 - Output: Structured brief with categorized items
-- Ask Maroun to confirm scope before proceeding
+- Ask you to confirm scope before proceeding
 
 ### Phase 2: PRD Generation
 Load `prd-writer` skill. Generate full PRD and prd.json.
 - Output: `specs/prd-v[N].md` + `agents/prd.json` + `progress.md`
-- Ask Maroun to approve before building
+- Ask you to approve before building
 
 ### Phase 3: Design Direction
 Load relevant design skills based on project needs:
@@ -69,10 +69,10 @@ claude --dangerously-skip-permissions -p "/lfg Phase 3: Implement V[N] user stor
 - Run local preview
 - Check against acceptance criteria
 - Lighthouse audit (performance + accessibility)
-- Report results to Maroun
+- Report results to you
 
 ## Rules
 - **Always pause for approval** between Phase 2 (PRD) and Phase 4 (Build)
 - **Design phase can be skipped** if using established design system
-- **Budget check** before Phase 4 — estimate cost and confirm with Maroun
+- **Budget check** before Phase 4 — estimate cost and confirm with you
 - **Log everything** — lessons, decisions, tasks to ClawVault

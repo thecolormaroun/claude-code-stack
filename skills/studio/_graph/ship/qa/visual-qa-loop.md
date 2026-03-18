@@ -40,7 +40,7 @@ Do not mark a UI feature done until this loop outputs **zero diffs**.
 Run the screenshot script (or call the browser tool directly):
 
 ```bash
-~/clawd/skills/studio/scripts/visual-qa.sh [URL]
+./scripts/visual-qa.sh [URL]
 # Default URL: http://localhost:3000
 # Outputs: screenshot path for analysis
 ```
@@ -147,7 +147,7 @@ For each state that fails: apply Name It Precisely format → fix → verify.
 After passing, log everything that was caught to the taste-compounding system:
 
 ```bash
-# Append to ~/clawd/skills/studio/logs/design-critique-log.md
+# Append to ./logs/design-critique-log.md
 # Format: see [[studio.design.critique.taste-compounding]]
 ```
 

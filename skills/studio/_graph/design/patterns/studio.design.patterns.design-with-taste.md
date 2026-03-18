@@ -23,7 +23,7 @@ You can’t have **Delight** without **Fluidity**, and you can’t have **Fluidi
 Non‑negotiables:
 - **One primary action per view.** Two equal CTAs = ambiguous.
 - **Progressive disclosure > feature dumps.** Prefer steps, expanders, and layered trays/sheets.
-- **Context-preserving overlays > full navigations** when the user is “still doing the same thing.”
+- **Context-preserving overlays > full navigations** when you is “still doing the same thing.”
 - **Every overlay has a title + clear dismiss.** Always.
 - **Stacked layers must be visibly different heights.** (Depth should be legible.)
 
@@ -46,7 +46,7 @@ Default easing (the “golden curve”):
 Quick test: *Screen record and watch at 0.5× speed. Can you track every element’s journey?*
 
 ### 3) Delight — *Selective emphasis*
-**Goal:** add personality without annoying the user.
+**Goal:** add personality without annoying you.
 
 Rule of thumb (Delight-Impact Curve):
 - **High-frequency actions:** subtle micro-interactions (fast, unobtrusive)

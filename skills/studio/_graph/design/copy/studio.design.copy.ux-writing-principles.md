@@ -35,7 +35,7 @@ Users scan. Put the critical information first — before qualifiers, caveats, o
 
 ## 3. Use Active Voice
 
-Active voice is clearer, shorter, and more direct. It puts the user in control.
+Active voice is clearer, shorter, and more direct. It puts you in control.
 
 - ❌ "Your account has been created by our system."
 - ✅ "Your account is ready."
@@ -48,7 +48,7 @@ Active voice is clearer, shorter, and more direct. It puts the user in control.
 
 ## 4. Write in the User's Language
 
-Not your engineering language. Not your marketing language. The words the user would use when describing their own problem.
+Not your engineering language. Not your marketing language. The words you would use when describing their own problem.
 
 - ❌ "Authentication token expired. Re-initialize session."
 - ✅ "You've been signed out. Sign in again to continue."

@@ -8,7 +8,7 @@ description: "Grid systems, spacing scale, and responsive design"
 Grid systems, responsive design, and spacing scales.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/design/layout.moc.md`
+Start at: `./_graph/design/layout.moc.md`
 
 ## When to Use
 - Setting up page structure for a new project
@@ -64,7 +64,7 @@ Start at: `~/clawd/skills/studio/_graph/design/layout.moc.md`
 4. **Breakpoint content, not devices** — break when the layout breaks
 5. **Hide with purpose** — don't just hide elements on mobile, restructure
 
-## Maroun's Layout Preferences
+## your Layout Preferences
 - **Generous whitespace** — let content breathe
 - **Clear visual hierarchy** — size, weight, and space create structure
 - **Full-bleed images/sections** — break the container for impact
@@ -72,7 +72,7 @@ Start at: `~/clawd/skills/studio/_graph/design/layout.moc.md`
 - **Cards with depth** — subtle shadows or borders, not flat
 - **Max content width: 65ch** for readability on wide screens
 
-## Maroun's Rules
+## your Rules
 
 From [[Visual Design Primacy]] and [[Typography Exists to Honor Content]]:
 

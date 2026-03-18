@@ -5,13 +5,13 @@
 #   URL defaults to http://localhost:3000
 #
 # The agent will pick up the output path and run the image tool against it.
-# Part of the Visual QA Loop: ~/clawd/skills/studio/_graph/ship/qa/visual-qa-loop.md
+# Part of the Visual QA Loop: ./_graph/ship/qa/visual-qa-loop.md
 
 set -euo pipefail
 
 URL="${1:-http://localhost:3000}"
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-SCREENSHOT_DIR="${HOME}/clawd/skills/studio/logs/screenshots"
+SCREENSHOT_DIR="./logs/screenshots"
 SCREENSHOT_PATH="${SCREENSHOT_DIR}/screenshot_${TIMESTAMP}.png"
 
 mkdir -p "$SCREENSHOT_DIR"
@@ -61,4 +61,4 @@ echo "  2. Compare against design spec if available"
 echo "  3. Output diffs in 'Name It Precisely' format"
 echo "  4. Fix and re-run until zero diffs"
 echo ""
-echo "See: ~/clawd/skills/studio/_graph/ship/qa/visual-qa-loop.md"
+echo "See: ./_graph/ship/qa/visual-qa-loop.md"

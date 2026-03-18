@@ -7,7 +7,7 @@ when_to_use:
   - weekly (automated, Sunday 6 PM) to promote patterns to anti-slop rules
 inputs:
   - critique_entries: "Name It Precisely format issues from visual-qa-loop or two-axis-review"
-  - critique_log: "~/clawd/skills/studio/logs/design-critique-log.md"
+  - critique_log: "./logs/design-critique-log.md"
 outputs:
   - log_entry: "Appended critique entry in the log"
   - promoted_rules: "New entries in anti-slop.md (weekly, automated)"
@@ -61,7 +61,7 @@ Build → Visual QA Loop → Two-Axis Review
 
 After every Visual QA Loop and Two-Axis Review session, append all found issues to the critique log.
 
-**Log location:** `~/clawd/skills/studio/logs/design-critique-log.md`
+**Log location:** `./logs/design-critique-log.md`
 
 ### Log entry format
 
@@ -121,7 +121,7 @@ The anti-slop file evolves from real build critiques, not hypothetical rules.
 
 ## The Critique Log File
 
-**Path:** `~/clawd/skills/studio/logs/design-critique-log.md`
+**Path:** `./logs/design-critique-log.md`
 
 The file is append-only. Never delete entries. Mark promoted ones inline.
 
@@ -146,15 +146,15 @@ The weekly compounding runs via OpenClaw cron:
 ```
 Name: weekly-taste-compounding
 Schedule: 0 18 * * 0  (Sunday 6 PM)
-Timezone: America/Los_Angeles
+Timezone: [your timezone]
 Model: anthropic/claude-haiku-4-5-20251001
 Session: isolated
 Timeout: 300 seconds
 ```
 
 ### What the cron does (prompt summary)
-1. Read `~/clawd/skills/studio/logs/design-critique-log.md`
-2. Read `~/clawd/skills/studio/_graph/design/system/studio.design.system.anti-slop.md`
+1. Read `./logs/design-critique-log.md`
+2. Read `./_graph/design/system/studio.design.system.anti-slop.md`
 3. Group critique entries by pattern (same violation type, same element type)
 4. Identify patterns appearing ≥2 times
 5. Append new rules to anti-slop.md for each qualifying pattern
@@ -169,7 +169,7 @@ Timeout: 300 seconds
 ```bash
 # After visual-qa-loop and two-axis-review complete,
 # append all issues found to the critique log:
-# ~/clawd/skills/studio/logs/design-critique-log.md
+# ./logs/design-critique-log.md
 # Use Name It Precisely format (what/why/correct)
 ```
 

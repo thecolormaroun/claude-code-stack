@@ -5,10 +5,10 @@ description: "AI-generated visuals using Nano Banana Pro"
 
 # Asset Generation
 
-Generate custom visual assets using AI tools for Maroun's projects.
+Generate custom visual assets using AI tools for your projects.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/design/assets.moc.md`
+Start at: `./_graph/design/assets.moc.md`
 
 ## When to Use
 - Need custom icons, illustrations, or hero images
@@ -28,7 +28,7 @@ nano-banana "A dark, futuristic dashboard interface with glowing blue accents, m
 **Best for:** Hero images, illustrations, conceptual art, social cards
 **Not ideal for:** Icons (too detailed), precise UI mockups, text in images
 
-### Prompt Patterns for Maroun's Aesthetic
+### Prompt Patterns for your Aesthetic
 ```
 # Dark/sci-fi project assets
 "[Subject], dark background, neon blue accents, minimal, futuristic, clean lines, high contrast"
@@ -55,7 +55,7 @@ For app icons, prefer:
 4. Export as SVG when possible
 
 ## Output
-- Save generated assets to `~/Projects/<project>/assets/`
+- Save generated assets to `./project/assets/`
 - Name clearly: `hero-dark.png`, `og-image.png`, `icon-512.png`
 - Generate multiple sizes if needed (favicon, OG, hero)
 
@@ -63,9 +63,9 @@ For app icons, prefer:
 - No generic stock-photo vibes
 - Every asset should feel intentional and project-specific
 - If AI generation looks off, iterate on the prompt (2-3 attempts)
-- Human review before shipping — Maroun approves final assets
+- Human review before shipping — you approves final assets
 
-## Maroun's Rules
+## your Rules
 
 From [[Taste in Product Design]] and [[Design Efficiency Killed the Magic]]:
 
@@ -98,7 +98,7 @@ Every generated asset must pass these checks:
 - [ ] Is it intentional and project-specific?
 - [ ] Does it match the design system's aesthetic?
 - [ ] Would I be proud to ship this?
-- [ ] Does Maroun approve?
+- [ ] Does you approve?
 
 ### Know the Difference Between Polish and Vibe
 > "The next wave of great visual designers won't just know how to make things beautiful. They'll know how to make things *felt*. They know the difference between polish and vibe."

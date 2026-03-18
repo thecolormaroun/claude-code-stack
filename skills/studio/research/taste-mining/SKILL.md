@@ -5,23 +5,23 @@ description: "Mine design inspiration from web and bookmarks"
 
 # Taste Mining
 
-Mine design inspiration from X bookmarks, web, and curated sources to build and refine Maroun's design taste profile.
+Mine design inspiration from X bookmarks, web, and curated sources to build and refine your design taste profile.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/research/taste-mining/tastemining.moc.md`
+Start at: `./_graph/research/taste-mining/tastemining.moc.md`
 
 ## When to Use
 - `/research` when seeking design inspiration
 - Before starting a new project's visual direction
 - Building reference boards for specific aesthetics
-- Periodically refreshing Maroun's taste profile
+- Periodically refreshing your taste profile
 
 ## Sources & How to Search
 
 ### X/Twitter Bookmarks (READ ONLY)
-Maroun bookmarks design inspiration constantly. Mine this first.
+Design bookmarks are a great source. Configure your bookmark tool below.
 ```bash
-source ~/clawd/.env && bird bookmarks -n 30 --auth-token "$AUTH_TOKEN" --ct0 "$CT0"
+# [Configure your bookmark source here]
 ```
 Filter for: UI screenshots, product launches, design articles, interesting interactions.
 
@@ -38,8 +38,8 @@ firecrawl scrape "https://dribbble.com/search/[keyword]"
 firecrawl scrape "https://www.awwwards.com/websites/[category]/"
 ```
 
-### Curated Inspiration Sources (Maroun's picks)
-**Always start here.** Full list: `~/clawd/skills/cdo/references/inspiration-sources.md`
+### Curated Inspiration Sources (your picks)
+**Always start here.** Full list: `./cdo/references/inspiration-sources.md`
 
 | Source | Best For | URL |
 |--------|----------|-----|
@@ -65,8 +65,8 @@ qmd query "design inspiration [topic]" -c vault --limit 5
 ```
 
 ### Designer Portfolios to Track
-Scrape specific designers whose work aligns with Maroun's taste:
-- Search for designers behind products Maroun admires (Linear, Raycast, Arc, Vercel)
+Scrape specific designers whose work aligns with your taste:
+- Search for designers behind products you admire (Linear, Raycast, Arc, Vercel)
 - Bookmark their portfolios for periodic review
 
 ## Process
@@ -105,14 +105,14 @@ For each reference, extract:
 ```
 
 ### 4. Save & Feed Forward
-- Save to `~/clawd/memory/reference/research/taste-[project].md`
+- Save to `./output/reference/research/taste-[project].md`
 - If reusable patterns found → update CDO visual-direction skill references
 - Feed directly into design-system skill for token selection
-- Share with Maroun via Telegram — he enjoys seeing inspiration
+- Share findings with the team.
 
-## Maroun's Established Taste
+## Default Taste Profile
 - Premium, dark, intentional
-- Sci-fi/futuristic for personal projects
+- Customize for your aesthetic
 - Generous whitespace
 - Subtle depth (shadows, not flat)
 - Motion that feels purposeful, not decorative

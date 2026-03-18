@@ -4,7 +4,7 @@ description: (no description)
 name: Product (MOC)
 description: Entry point for Studio product knowledge (discovery → PRD → prioritization → roadmap).
 inputs:
-  - voice_dump: "Raw brain dump from Maroun (audio transcript or text)"
+  - voice_dump: "Raw brain dump from you (audio transcript or text)"
   - feedback: "Bug reports, feature requests, user feedback"
   - existing_prd: "Prior PRD to iterate on"
 outputs:

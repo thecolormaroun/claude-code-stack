@@ -16,7 +16,7 @@ when_to_use:
 | **Design Spells** | https://designspells.com | Interaction design details | JS-heavy, needs browser scrape |
 | **Handheld Design** | https://handheld.design | Mobile design patterns | Substack, Design Picks series |
 | **Featured Mobile** | https://featuredmobile.com | Curated mobile inspiration | JS-heavy |
-| **X Bookmarks** | bird CLI (read-only) | Maroun's design saves | Processed by ops-x-bookmarks cron |
+| **X Bookmarks** | bird CLI (read-only) | your design saves | Processed by ops-x-bookmarks cron |
 
 ## Tier 2 — Periodic Scan
 
@@ -31,6 +31,6 @@ when_to_use:
 
 1. Scrape Tier 1 weekly (automated via weekly-design-digest cron)
 2. For each finding: extract the pattern, name it, write the "apply this" action
-3. If durable: create Zettelkasten note → `~/Vault/10 Knowledge/14 Permanent Notes/Design/`
+3. If durable: create Zettelkasten note → `./vault/10 Knowledge/14 Permanent Notes/Design/`
 4. If actionable for Studio: add to relevant pattern/checklist file in `_graph/design/`
 5. If Brian Lovin: always create permanent note (his writing is reference-grade)

@@ -8,10 +8,10 @@ description: "Process voice/text dumps into structured creative briefs"
 Process raw voice notes, text dumps, and unstructured ideas into structured, actionable creative briefs. This is the entry point to the Studio pipeline.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/product/braindump.moc.md`
+Start at: `./_graph/product/braindump.moc.md`
 
 ## When to Use
-- Maroun sends a voice note with ideas, feedback, or feature requests
+- you sends a voice note with ideas, feedback, or feature requests
 - Unstructured text about what he wants built
 - `/braindump` command
 - Post-usage feedback on shipped products
@@ -29,11 +29,11 @@ Parse the raw input. Every discrete idea, request, or observation gets classifie
 | **🔧 Improvement** | "better", "faster", "easier", "annoying" | Score with RICE |
 | **🎯 Strategic** | "vision", "goal", "eventually", "phase 2" | Roadmap/Later bucket |
 | **💡 Design** | "look", "feel", "style", "layout", "color" | Route to Design dept |
-| **❓ Open Question** | "should we", "not sure", "what if" | Flag for Maroun |
+| **❓ Open Question** | "should we", "not sure", "what if" | Flag for you |
 
 **Rules:**
 - Extract EVERYTHING — don't skip items that seem minor
-- Preserve Maroun's exact words for context (quotes)
+- Preserve your exact words for context (quotes)
 - Infer implicit requirements from his preferences (USER.md)
 - Note emotional signals — excitement = higher priority, frustration = P0
 
@@ -60,11 +60,11 @@ Parse the raw input. Every discrete idea, request, or observation gets classifie
 ### 🎯 Strategic Direction
 - [Vision/goal/direction noted]
 
-### ❓ Open Questions (need Maroun's input)
+### ❓ Open Questions (need your input)
 1. [Question — why it matters for scoping]
 
 ### Implicit Requirements (inferred)
-- [From Maroun's preferences: dark theme, premium feel, etc.]
+- [From your preferences: dark theme, premium feel, etc.]
 - [From project context: existing stack, design system]
 ```
 
@@ -86,24 +86,24 @@ Based on what was extracted:
 For every brain dump processed:
 ```bash
 # Create project task
-CLAWVAULT_PATH=~/clawd/memory clawvault task add "[Project] V[N] — [summary]" \
+CLAWVAULT_PATH=./memory clawvault task add "[Project] V[N] — [summary]" \
   --priority [P] --project [project] --owner studio
 
 # Log the decision to process
-CLAWVAULT_PATH=~/clawd/memory clawvault remember decision \
+CLAWVAULT_PATH=./memory clawvault remember decision \
   "[Project] V[N] scope" --content "Scoped from brain dump: [key decisions]"
 ```
 
 ### 5. Save & Report
 
-- Summary → `~/Projects/<project>/specs/braindump-[date].md`
-- Send structured summary to Maroun via Telegram
+- Summary → `./project/specs/braindump-[date].md`
+- Send structured summary to you to the team
 - If routable: hand off to next skill with context
 
 ## Version Evolution Pattern
 
 ```
-V1 ships → Maroun uses it → Brain dumps feedback
+V1 ships → you uses it → Brain dumps feedback
     ↓
 Brain dump processor extracts & classifies
     ↓
@@ -121,4 +121,4 @@ V2 ships → cycle repeats
 - **Input:** Voice transcripts, text messages, forwarded content
 - **Output:** Structured brief + classification in project specs/
 - **Next:** prd-writer, design dept, roadmap-manager, or direct ClawVault tasks
-- **References:** CPO skill patterns at `~/clawd/skills/cpo/SKILL.md`
+- **References:** CPO skill patterns at `./skills/cpo/SKILL.md`

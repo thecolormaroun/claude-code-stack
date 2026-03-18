@@ -14,6 +14,6 @@ Extract every discrete item and classify:
 - Improvement (score with RICE)
 - Strategic (Later bucket)
 - Design (route to Design)
-- Open question (needs Maroun)
+- Open question (needs you)
 
 Rule: extract everything, keep quotes, note emotional signals.

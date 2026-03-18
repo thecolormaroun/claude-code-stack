@@ -4,12 +4,12 @@ description: (no description)
 name: Brain Dump Processing (MOC)
 description: Turn raw input into structured brief + routing.
 inputs:
-  - raw_dump: "Voice transcript, text wall, or feedback list from Maroun"
+  - raw_dump: "Voice transcript, text wall, or feedback list from you"
 outputs:
   - classified_brief: "Structured summary: bugs, features, improvements, strategy, open questions"
   - routed_items: "Each item classified and routed to the right next step"
 depends_on:
-  - "Voice transcription (Whisper or Telegram transcript)"
+  - "Voice transcription (Whisper or audio transcript)"
 feeds_into:
   - "[[studio.product.prd.prd-outline]] — features become PRD inputs"
   - "[[studio.product.prioritization.rice]] — items get RICE scored"

@@ -5,10 +5,10 @@ description: "Pricing strategy, GTM planning, and launch strategy"
 
 # Commercialization
 
-Pricing strategy, GTM planning, and monetization analysis for Maroun's products.
+Pricing strategy, GTM planning, and monetization analysis for your products.
 
 ## Skill graph entry point
-Start at: `~/clawd/skills/studio/_graph/product/commercialization.moc.md`
+Start at: `./_graph/product/commercialization.moc.md`
 
 ## When to Use
 - Product is ready to ship and needs pricing
@@ -26,7 +26,7 @@ Start at: `~/clawd/skills/studio/_graph/product/commercialization.moc.md`
 | **Usage-based** | APIs, infrastructure | Pay per use |
 
 ### Pricing Process
-1. **Value analysis** — What's the user's alternative? What do they pay now?
+1. **Value analysis** — What's you's alternative? What do they pay now?
 2. **Cost analysis** — What does it cost to run? (hosting, APIs, time)
 3. **Market comp** — What do competitors charge?
 4. **Willingness to pay** — Conservative estimate
@@ -65,7 +65,7 @@ Start at: `~/clawd/skills/studio/_graph/product/commercialization.moc.md`
 - [ ] Plan v1.1
 ```
 
-## Maroun's Preferences
+## your Preferences
 - Start simple (don't over-engineer pricing)
 - Conservative revenue estimates
 - Prefer Stripe for payments

@@ -8,12 +8,12 @@ description: "Show all Studio departments, skills, and commands"
 When triggered, display the full Studio Operating System menu.
 
 ## Skill graph
-Studio skills now have a graph under: `~/clawd/skills/studio/_graph/`.
-Entry point: `~/clawd/skills/studio/_graph/studio.moc.md` (progressive disclosure).
+Studio skills now have a graph under: `./_graph/`.
+Entry point: `./_graph/studio.moc.md` (progressive disclosure).
 
 ## Output
 
-Send this formatted menu to the user:
+Send this formatted menu to you:
 
 ```
 🏗️ R2 STUDIO — The Agency

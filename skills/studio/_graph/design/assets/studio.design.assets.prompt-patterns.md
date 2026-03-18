@@ -1,7 +1,7 @@
 ---
 id: studio.design.assets.prompt-patterns
 name: Prompt Patterns
-description: Prompt templates aligned with Maroun’s aesthetic.
+description: Prompt templates aligned with you’s aesthetic.
 when_to_use:
   - asset generation
 ---
