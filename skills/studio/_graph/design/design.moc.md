@@ -5,7 +5,7 @@ name: Design (MOC)
 description: Entry point for Studio design knowledge (patterns, heuristics, checklists, templates).
 inputs:
   - design_brief: "Product brief or PRD from product.moc or CPO skill"
-  - taste_profile: "your curated taste profile from research.moc/tastemining"
+  - taste_profile: "Maroun's curated taste profile from research.moc/tastemining"
   - user_request: "Direct design request (/design, /typography, /layout, etc.)"
 outputs:
   - design_spec: "Component specs, interaction patterns, spacing/color decisions"
@@ -23,7 +23,7 @@ triggers:
   - "/copy-qa — run the copy QA checklist"
 depends_on:
   - "[[product.moc]] — needs product brief before designing"
-  - "[[research.moc]] tastemining — pulls your taste profile"
+  - "[[research.moc]] tastemining — pulls Maroun's taste profile"
 feeds_into:
   - "[[ship.moc]] — design spec becomes implementation input"
   - "coding-agent skill — component specs guide implementation"
@@ -38,33 +38,41 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 | Task | Load this |
 |------|-----------|
 | Visual brand direction, colors, mood | [[studio.design.system.creative-direction]] → [[studio.design.system.design-tokens]] |
-| Font choices, type scale | [[typography.moc]] |
-| Grid, spacing, responsive rules | [[layout.moc]] |
-| Component library, tokens | [[designsystem.moc]] |
-| Images, icons, OG images | [[assets.moc]] |
+| Font choices, type scale | [[studio.design.typography.moc]] |
+| Grid, spacing, responsive rules | [[studio.design.layout.moc]] |
+| Component library, tokens | [[studio.design.designsystem.moc]] |
+| Images, icons, OG images | [[studio.design.assets.moc]] |
 | Writing or reviewing UI copy | [[studio.design.copy.moc]] |
 | Pattern-match a UI copy surface | [[studio.design.copy.microcopy-patterns]] |
 | Copy tone for a specific emotional context | [[studio.design.copy.tone-matrix]] |
 | Pre-ship copy QA | [[studio.design.copy.checklist]] |
 | Quick UI critique | [[studio.design.checklist.ui-critique]] |
 | Visual QA before shipping | [[studio.design.checklist.visual-qa]] |
+| Animation/transition review, easing, polish | [[studio.design.emil-design-eng]] |
+| Full UI/UX rules audit (152 rules) | [[studio.design.userinterface-wiki]] |
+| Animation implementation review | [[studio.design.userinterface-wiki]] → `timing-*`, `physics-*`, `spring-*` rules |
+| UX psychology audit (Fitts's, Hick's, etc.) | [[studio.design.userinterface-wiki]] → `ux-*` rules |
+| Typography implementation review | [[studio.design.userinterface-wiki]] → `type-*` rules |
 
 ## MOCs (sub-domains)
-- [[typography.moc]] — type scale, font pairing, readability
-- [[layout.moc]] — grid systems, spacing, responsive
-- [[designsystem.moc]] — tokens, components, colors, motion
-- [[assets.moc]] — AI-generated visuals, icons, OG images
+- [[studio.design.typography.moc]] — type scale, font pairing, readability
+- [[studio.design.layout.moc]] — grid systems, spacing, responsive
+- [[studio.design.designsystem.moc]] — tokens, components, colors, motion
+- [[studio.design.assets.moc]] — AI-generated visuals, icons, OG images
 - [[studio.design.copy.moc]] — UX copywriting, microcopy, tone, voice
+
+## Design Engineering
+- [[studio.design.emil-design-eng]] — animation decisions, easing, spring physics, component polish (Emil Kowalski / Vercel / Sonner)
+- [[studio.design.userinterface-wiki]] — 152 implementation rules: animation, timing, UX laws, typography, prefetch, visual polish (Raphael Salaja)
 
 ## System
 - [[studio.design.system.design-tokens]] — canonical token definitions
-- [[studio.design.system.creative-direction]] — your design taste and brand philosophy
+- [[studio.design.system.creative-direction]] — Maroun's design taste and brand philosophy
 
 ## Patterns
 - [[studio.design.patterns.design-with-taste]] — how to make opinionated design decisions
 - [[studio.design.patterns.motion-design-patterns]] — Motion.dev patterns
 - [[studio.design.patterns.premium-interaction-patterns]] — premium feel heuristics
-- [[human-processor-model]] — scientific timing reference (70ms cognitive cycle, Card/Moran/Newell)
 
 ## Copy
 - [[studio.design.copy.moc]] — UX copywriting entry point (load this first for any copy work)
@@ -81,12 +89,12 @@ Entry point for design work. Load sub-nodes progressively — don't load everyth
 ## Checklists
 - [[studio.design.checklist.ui-critique]] — structured design critique
 - [[studio.design.checklist.visual-qa]] — pre-ship quality gate
-- [[visual-qa-loop]] — screenshot → compare → fix protocol (Gate 1)
-- [[two-axis-review]] — 4-quadrant quality score, min 3/5 (Gate 2)
+- [[studio.ship.qa.visual-qa-loop]] — screenshot → compare → fix protocol (Gate 1)
+- [[studio.ship.qa.two-axis-review]] — 4-quadrant quality score, min 3/5 (Gate 2)
 - [[studio.design.copy.checklist]] — pre-ship copy QA (runs alongside visual-qa)
 
 ## Critique & Taste
-- [[taste-compounding]] — live critique accumulation → anti-slop rule promotion
+- [[studio.design.critique.taste-compounding]] — live critique accumulation → anti-slop rule promotion
 
 ## Templates
 - [[studio.design.template.design-brief]] — design brief format
