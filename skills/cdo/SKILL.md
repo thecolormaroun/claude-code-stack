@@ -2,7 +2,7 @@
 name: cdo
 description: "Chief Design Officer skill. Enrich CPO plan files with visual direction, design systems, and UX specs. Output feeds directly into compound-engineering /ce:work."
 metadata:
-  clawdbot:
+  agent:
     emoji: "🎨"
     os: ["darwin", "linux"]
 ---

@@ -59,9 +59,9 @@ firecrawl scrape "https://www.awwwards.com/websites/[category]/"
 | **Mobbin** | Mobile UI patterns | `web_search("site:mobbin.com [pattern]")` |
 | **Refero** | Real product screenshots | `web_fetch("https://refero.design/")` |
 
-### Vault Knowledge
+### Knowledge Base
 ```bash
-qmd query "design inspiration [topic]" -c vault --limit 5
+# Search your knowledge base for design inspiration
 ```
 
 ### Designer Portfolios to Track

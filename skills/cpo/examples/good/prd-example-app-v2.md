@@ -72,7 +72,7 @@ V2 adds favorites and fixes age display bugs. Based on 2 weeks of daily use feed
 
 ```json
 {
-  "project": "NoahsNoms",
+  "project": "ExampleApp",
   "branchName": "ralph/v2-favorites",
   "userStories": [
     {

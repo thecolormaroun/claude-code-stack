@@ -23,7 +23,7 @@ depends_on:
   - "coding-agent skill (for implementation)"
 feeds_into:
   - "Shipped product features"
-  - "Obsidian vault (artifacts saved to ./vault/00 Inbox/)"
+  - "Knowledge base (artifacts saved to ./inbox/)"
   - "Linear issues (progress tracked)"
 ---
 

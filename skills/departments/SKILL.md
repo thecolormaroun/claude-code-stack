@@ -2,7 +2,7 @@
 name: departments
 description: "Route work through CPO → CDO → compound-engineering. The full pipeline from brain dump to shipped code."
 metadata:
-  clawdbot:
+  agent:
     emoji: "🏢"
     os: ["darwin", "linux"]
 ---
@@ -80,13 +80,13 @@ Execute compound-engineering's `/lfg` workflow:
 
 ## Example Flow
 
-**User:** "run the drip v2 brain dump through the departments"
+**User:** "run the dashboard app brain dump through the departments"
 
 **Pipeline:**
 
 1. **CPO** reads brain dump, outputs:
    ```
-   docs/plans/2026-03-18-001-feat-drip-v2-dashboard-plan.md
+   docs/plans/2026-03-18-001-feat-example-dashboard-plan.md
    ```
 
 2. **CDO** enriches plan with design spec:
@@ -97,7 +97,7 @@ Execute compound-engineering's `/lfg` workflow:
 
 3. **Compound Engineering** executes:
    ```
-   /ce:work docs/plans/2026-03-18-001-feat-drip-v2-dashboard-plan.md
+   /ce:work docs/plans/2026-03-18-001-feat-example-dashboard-plan.md
    ```
    - Creates tasks from Implementation Units
    - Spawns subagents for parallel work
@@ -112,7 +112,7 @@ Track in `docs/plans/.pipeline-state.json`:
 
 ```json
 {
-  "current_plan": "2026-03-18-001-feat-drip-v2-dashboard-plan.md",
+  "current_plan": "2026-03-18-001-feat-example-dashboard-plan.md",
   "stage": "cdo",  // "cpo" | "cdo" | "lfg" | "complete"
   "started": "2026-03-18T18:30:00Z",
   "cpo_complete": true,

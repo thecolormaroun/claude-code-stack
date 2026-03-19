@@ -5,7 +5,7 @@
 After CPO processing, the project should have:
 
 ```
-~/Projects/[project-name]/
+./
 ├── agents/
 │   └── prd.json              # Ralph loop execution spec
 ├── specs/
@@ -67,7 +67,7 @@ Each story MUST be completable in one `/lfg` iteration:
 Always use `ralph/` prefix for compound engineering compatibility:
 
 ```
-ralph/v2-noah-noms-improvements
+feature/v2-example-improvements
 ralph/v1-initial-build
 ralph/v3-search-and-filters
 ```
@@ -110,6 +110,6 @@ When all stories pass:
 ```markdown
 ## Status: ✅ RALPH_DONE
 Completed: YYYY-MM-DD
-Branch: ralph/v2-noah-noms-improvements
+Branch: feature/v2-example-improvements
 Stories: 8/8 passed
 ```

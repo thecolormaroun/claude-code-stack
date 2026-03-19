@@ -2,7 +2,7 @@
 name: cpo
 description: "Chief Product Officer skill. Turn brain dumps into shipping software. Process voice/text into structured plans compatible with compound-engineering /lfg workflow."
 metadata:
-  clawdbot:
+  agent:
     emoji: "🎯"
     os: ["darwin", "linux"]
 ---
