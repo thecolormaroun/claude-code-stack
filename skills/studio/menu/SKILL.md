@@ -16,7 +16,7 @@ Entry point: `./_graph/studio.moc.md` (progressive disclosure).
 Send this formatted menu to you:
 
 ```
-🏗️ R2 STUDIO — The Agency
+🏗️ DESIGN STUDIO — The Agency
 
 📦 PRODUCT
   /braindump — Process voice/text into structured brief

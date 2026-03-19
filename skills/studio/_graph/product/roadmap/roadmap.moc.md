@@ -14,7 +14,7 @@ depends_on:
   - "Linear issues — current status of tracked work"
 feeds_into:
   - "[[ship.moc]] — roadmap decides what ships next"
-  - "AGENTS.md project queue — keeps R2's priority list current"
+  - "AGENTS.md project queue — keeps the project's priority list current"
 ---
 
 # Roadmap Manager — MOC

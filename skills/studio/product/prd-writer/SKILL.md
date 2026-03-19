@@ -33,7 +33,7 @@ Save to `./project/specs/prd-v[N].md`:
 ```markdown
 # PRD: [Product/Feature Name] V[N]
 
-**Author:** you Najjar (via R2 Studio)
+**Author:** Product Team
 **Date:** YYYY-MM-DD
 **Status:** Draft | In Review | Approved | In Progress | Shipped
 
