@@ -1,6 +1,6 @@
 ---
 name: cdo
-description: "Chief Design Officer skill. Transform product requirements into visual direction, design systems, and user experience specifications. Orchestrates granular design skills for typography, layout, visual direction, design systems, and UX patterns."
+description: "Chief Design Officer skill. Enrich CPO plan files with visual direction, design systems, and UX specs. Output feeds directly into compound-engineering /ce:work."
 metadata:
   clawdbot:
     emoji: "🎨"
@@ -9,16 +9,29 @@ metadata:
 
 # CDO Skill — Chief Design Officer
 
-Transform product vision into beautiful, usable experiences.
+Enrich plan files with design specifications for compound-engineering execution.
 
 **Philosophy:** Clean, premium, evidence-based design with strong typography, intentional spacing, and delightful interactions.
 
 ---
 
+## Input
+
+CDO reads a **plan file** from CPO:
+```
+docs/plans/YYYY-MM-DD-NNN-<type>-<name>-plan.md
+```
+
+## Output
+
+CDO **appends** `## Design Specification` to the plan file, keeping everything in one place for `/ce:work`.
+
+---
+
 ## Workflow
 
-Read `instructions/workflow.md` for the 6-step process:
-1. Parse requirements → 2. Visual strategy → 3. Information architecture → 4. Typography & system → 5. Component specs → 6. Design spec document
+Read `instructions/workflow.md` for the 5-step process:
+1. Parse requirements → 2. Visual strategy → 3. Information architecture → 4. Component specs → 5. Enrich plan file
 
 ---
 
@@ -71,9 +84,18 @@ Read `instructions/specialties.md` for detailed descriptions of:
 
 ---
 
-## Templates
+## Integration with Pipeline
 
-Use `templates/design-spec.md` for output format.
+CDO is step 2 in the departments pipeline:
+
+```
+Brain Dump → CPO → CDO → /lfg
+```
+
+After CDO enriches the plan:
+```bash
+/ce:work docs/plans/YYYY-MM-DD-NNN-<type>-<name>-plan.md
+```
 
 ---
 
@@ -81,7 +103,7 @@ Use `templates/design-spec.md` for output format.
 
 | Input | Action |
 |-------|--------|
-| "Design spec for [PRD]" | Full workflow |
+| "Design spec for [plan file]" | Full workflow, enrich plan |
 | "Visual direction for [brief]" | Load visual-direction/ |
 | "Component specs for [list]" | Load design-system/ |
 | "Accessibility review" | Load rams/ |

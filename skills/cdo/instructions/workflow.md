@@ -1,22 +1,31 @@
 # CDO Core Workflow
 
 ```
-PRD + Requirements
+Plan File (from CPO)
     ↓
 ┌─────────────────────┐
 │   1. UNDERSTAND     │  Parse product goals, user needs, constraints
 │   2. RESEARCH       │  Reference design system, gather inspiration
 │   3. STRATEGIZE     │  Visual direction, information architecture
 │   4. SPECIFY        │  Detailed design specs for each component/flow
-│   5. SYSTEMIZE      │  Design tokens, component library, patterns
+│   5. ENRICH         │  Append design spec to plan file
 └─────────────────────┘
     ↓
-Studio Implementation (with fidelity check)
+Ready for /ce:work or /lfg
 ```
+
+## Input
+
+CDO reads a **plan file** from CPO, typically at:
+```
+docs/plans/YYYY-MM-DD-NNN-<type>-<name>-plan.md
+```
+
+The plan contains product requirements, user stories, and acceptance criteria.
 
 ## Step 1: Parse Requirements
 
-Extract design-relevant information from PRD or brief:
+Extract design-relevant information from the plan:
 
 | Requirement Type | Design Question | Specialty Needed |
 |-----------------|----------------|------------------|
@@ -54,6 +63,48 @@ Load `typography/SKILL.md` and `design-system/SKILL.md` for:
 
 Create detailed specs for each UI component using established system.
 
-## Step 6: Generate Design Spec Document
+## Step 6: Enrich Plan File
 
-Output comprehensive design specification using `templates/design-spec.md`.
+**Append** design specification to the plan file under `## Design Specification`:
+
+```markdown
+## Design Specification
+
+### Visual Direction
+- Theme: [dark/light/system]
+- Primary color: [hex]
+- Accent color: [hex]
+- Typography: [font stack]
+
+### Layout
+- Grid: [columns, gutter, margins]
+- Breakpoints: [mobile, tablet, desktop]
+- Spacing scale: [4px base, or custom]
+
+### Components
+[Component specs for each UI element in the plan]
+
+### Interactions
+- Transitions: [duration, easing]
+- Hover states: [description]
+- Loading states: [skeleton, spinner, etc.]
+
+### Accessibility
+- Contrast ratios: [WCAG AA/AAA]
+- Focus indicators: [style]
+- Motion: [respect prefers-reduced-motion]
+```
+
+This keeps everything in one file for `/ce:work` to consume.
+
+## Output
+
+The enriched plan file is ready for compound-engineering:
+```bash
+/ce:work docs/plans/YYYY-MM-DD-NNN-<type>-<name>-plan.md
+```
+
+Or run the full autonomous workflow:
+```bash
+/lfg
+```
