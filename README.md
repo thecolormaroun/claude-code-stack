@@ -1,71 +1,97 @@
-# Claude Code Stack
+# Stack
 
 Skills, workflows, and a design knowledge graph for Claude Code. One command takes an idea from brain dump to shipped PR.
 
 ## Quick Start
 
 ```bash
-# 1. Clone into your project
-git clone https://github.com/thecolormaroun/claude-code-stack.git .claude-code-stack
+# Clone into your Claude Code config
+git clone https://github.com/thecolormaroun/claude-code-stack.git ~/.claude/stack
 
-# 2. Copy skills to your project root
-cp -r .claude-code-stack/skills/ skills/
+# Link skills to your global config
+echo 'skills.load.extraDirs: ["~/.claude/stack/skills"]' >> ~/.claude/settings.json
 
-# 3. Install the compound-engineering plugin (powers /lfg)
+# Install compound-engineering (powers /lfg)
 claude plugins install compound-engineering@every-marketplace
-
-# 4. Copy the global config (optional — sets up Studio graph references)
-cp .claude-code-stack/config/CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
-Each skill folder contains a `SKILL.md` that Claude reads automatically. No additional configuration needed.
+Or copy individual skills into any project's `skills/` directory.
 
 ---
 
-## `/ship` — The Main Command
+## Commands
 
-One command runs the full pipeline. Drop a brain dump, feature idea, or voice note and `/ship` handles the rest.
+### `/mega` — The Full Pipeline
 
-```
-/ship [your idea here]
-```
+One command runs everything. Drop a brain dump and `/mega` handles product, design, build, review, security, QA, and shipping.
 
 ```
-Brain Dump → CPO (Product) → CDO (Design) → /lfg (Build + Ship)
+/mega [your idea here]
+```
+
+```
+Brain Dump → CPO (Product) → CDO (Design) → /lfg (Build) → /review → /cso → /qa → /ship
 ```
 
 | Phase | What happens | Output |
 |-------|-------------|--------|
 | **CPO** | Extracts requirements, RICE scores, sizes the work | Plan file in `docs/plans/` |
 | **CDO** | Adds visual direction, component specs, interaction patterns | Design spec appended to plan |
-| **/lfg** | Builds it, reviews it, ships it | Code + PR |
+| **/lfg** | Builds it (compound-engineering) | Working code |
+| **/review** | Staff engineer code review + auto-fixes | Clean code |
+| **/cso** | OWASP + STRIDE security audit | Security fixes |
+| **/qa** | Real browser testing, finds and fixes bugs | Verified features |
+| **/ship** | Sync, test, push, PR | Shipped PR |
 
-By default, `/ship` pauses for your approval after Product and after Design. Add `--yolo` to skip approval gates and run straight through.
+### Pipeline Variants
 
-### Other ways to trigger
+| Command | What it runs |
+|---------|-------------|
+| `/mega [idea]` | Full pipeline: product → design → build → verify → ship |
+| `/mega:spec [idea]` | CPO + CDO only — just the plan and design spec |
+| `/mega:build [plan]` | CDO → /lfg → verify — design through build |
+| `/mega:verify [branch]` | /review → /cso → /qa → /ship — verification suite only |
+| `/mega:qa [url]` | Just the gstack verification suite |
+
+### `/ideate` — Idea Validation
+
+Flesh out an idea before committing to build it.
+
+```
+/ideate [your idea]
+```
+
+Runs:
+- `/office-hours` — YC-style forcing questions, pushback on weak ideas
+- `/plan-ceo-review` — Scope expansion, strategic fit, risk assessment
+- `/plan-design-review` — Visual feasibility, component audit (0–10 per dimension)
+- `/plan-eng-review` — Architecture diagrams, test strategy, complexity estimate
+
+### Other Entry Points
 
 | Command | What it does |
 |---------|-------------|
-| `/ship [idea]` | Full pipeline: product → design → build |
-| `/ship --yolo [idea]` | Full pipeline, no approval gates |
-| "run it through the departments" | Same as `/ship` |
-| "departments: plan only" | CPO only — just the plan file |
-| "departments: design [plan]" | CDO only — add design spec to existing plan |
-| "departments: ship [plan]" | Skip to /lfg — build from existing plan |
+| `/ship [idea]` | Same as `/mega` (alias) |
+| `"run it through the departments"` | Same as `/mega` |
+| `"departments: plan only"` | CPO only — just the plan file |
+| `"departments: design [plan]"` | CDO only — add design spec to existing plan |
+| `"departments: ship [plan]"` | Skip to /lfg — build from existing plan |
 
 ---
 
 ## Skills Reference
 
-### Pipeline (the departments)
+### Pipeline Skills
 
-| Skill | What it does |
-|-------|-------------|
-| `departments/` | Orchestrates the full pipeline |
-| `cpo/` | Chief Product Officer — brain dumps → structured plan files with RICE scoring |
-| `cdo/` | Chief Design Officer — enriches plans with design specs (see sub-skills below) |
+| Skill | Emoji | What it does |
+|-------|-------|-------------|
+| `mega-workflow/` | 🚀 | Full pipeline orchestrator — product → design → build → verify → ship |
+| `ideate/` | 💡 | Idea validation suite — YC pushback, scope review, design + eng feasibility |
+| `departments/` | 🏢 | Simpler pipeline — CPO → CDO → /lfg |
+| `cpo/` | 🎯 | Chief Product Officer — brain dumps → structured plan files with RICE scoring |
+| `cdo/` | 🎨 | Chief Design Officer — enriches plans with design specs |
 
-#### CDO Sub-Skills
+### CDO Sub-Skills
 
 The CDO skill includes specialized modules that activate automatically during the design phase:
 
@@ -80,7 +106,7 @@ The CDO skill includes specialized modules that activate automatically during th
 | `cdo/rams/` | Design-aware accessibility review |
 | `cdo/react-doctor/` | Design-aware React audit |
 
-### Design Quality
+### Design Quality Skills
 
 Community skills for UI craft. Claude consults these automatically during UI work.
 
@@ -95,7 +121,7 @@ Community skills for UI craft. Claude consults these automatically during UI wor
 | `userinterface-wiki/` | 152 rules across 12 categories — animations, CSS, typography, UX patterns | [raphael-salaja](https://github.com/raphael-salaja) |
 | `better-icons/` | 200k+ icons via MCP | [better-auth/better-icons](https://github.com/better-auth/better-icons) |
 
-### Code Quality
+### Code Quality Skills
 
 Run these after writing code to clean up before shipping.
 
@@ -112,9 +138,9 @@ Run these after writing code to clean up before shipping.
 
 ---
 
-## Studio Skill Graph (90 files)
+## Studio Skill Graph
 
-A structured knowledge graph that Claude navigates during product, design, and build work. You don't invoke it directly — it's reference material that other skills pull from.
+A structured knowledge graph (90+ files) that Claude navigates during product, design, and build work. You don't invoke it directly — it's reference material that other skills pull from.
 
 | Domain | What's in it |
 |--------|-------------|
@@ -135,39 +161,41 @@ Entry point: `skills/studio/_graph/studio.moc.md`
 
 ```
 ├── config/
-│   └── CLAUDE.md                    # Global config (Studio graph refs, plan mode settings)
+│   └── CLAUDE.md              # Global config (Studio graph refs, plan settings)
 ├── plugins/
-│   └── compound-engineering/        # Plugin config
+│   └── compound-engineering/  # Plugin config
 ├── skills/
-│   ├── departments/                 # Pipeline orchestrator + /ship command
-│   ├── cpo/                         # Product — brain dump → plan file
-│   ├── cdo/                         # Design — plan file → design spec
-│   │   ├── visual-direction/        #   Color, mood, brand
-│   │   ├── ui-ux-pro-max/           #   Styles, palettes, font pairings
-│   │   ├── taste-skill/             #   Anti-LLM-bias rules
-│   │   ├── favicon/                 #   Favicon generation
-│   │   ├── deslop/                  #   Design-aware slop removal
-│   │   ├── simplify/                #   Design-aware simplification
-│   │   ├── rams/                    #   Design-aware accessibility
-│   │   └── react-doctor/            #   Design-aware React audit
-│   ├── studio/                      # Studio Skill Graph (90 files)
-│   │   └── _graph/                  #   Knowledge graph by domain
-│   ├── emil-design-eng/             # Animation craft
-│   ├── make-interfaces-feel-better/ # 16 UI principles
-│   ├── taste-skill-suite/           # Anti-LLM-bias + typography
-│   ├── impeccable/                  # Design commands
-│   ├── ui-skills/                   # Accessibility + motion
-│   ├── ui-design-brain/             # 60+ component patterns
-│   ├── userinterface-wiki/          # 152 UI/UX rules
-│   ├── better-icons/                # Icon library (MCP)
-│   ├── deslop/                      # Slop removal
-│   ├── simplify/                    # Code clarity
-│   ├── rams/                        # Accessibility review
-│   ├── react-doctor/                # React audit
-│   ├── knip/                        # Dead code removal
-│   ├── tdd/                         # Test-driven dev
-│   ├── fix-sentry-issues/           # Sentry error triage
-│   └── reclaude/                    # CLAUDE.md refactoring
+│   ├── mega-workflow/         # 🚀 Full pipeline orchestrator
+│   ├── ideate/                # 💡 Idea validation suite
+│   ├── departments/           # 🏢 Simpler pipeline
+│   ├── cpo/                   # 🎯 Product — brain dump → plan file
+│   ├── cdo/                   # 🎨 Design — plan file → design spec
+│   │   ├── visual-direction/
+│   │   ├── ui-ux-pro-max/
+│   │   ├── taste-skill/
+│   │   ├── favicon/
+│   │   ├── deslop/
+│   │   ├── simplify/
+│   │   ├── rams/
+│   │   └── react-doctor/
+│   ├── studio/                # Studio Skill Graph (90+ files)
+│   │   └── _graph/
+│   ├── emil-design-eng/
+│   ├── make-interfaces-feel-better/
+│   ├── taste-skill-suite/
+│   ├── impeccable/
+│   ├── ui-skills/
+│   ├── ui-design-brain/
+│   ├── userinterface-wiki/
+│   ├── better-icons/
+│   ├── deslop/
+│   ├── simplify/
+│   ├── rams/
+│   ├── react-doctor/
+│   ├── knip/
+│   ├── tdd/
+│   ├── fix-sentry-issues/
+│   └── reclaude/
 └── docs/
     └── setup-guide.md
 ```
@@ -177,7 +205,7 @@ Entry point: `skills/studio/_graph/studio.moc.md`
 ## Requirements
 
 - [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code)
-- [compound-engineering plugin](https://github.com/EveryInc/compound-engineering-plugin) — powers `/lfg`, the build phase
+- [compound-engineering plugin](https://github.com/EveryInc/compound-engineering-plugin) — powers `/lfg`
 
 ```bash
 claude plugins install compound-engineering@every-marketplace
@@ -185,6 +213,12 @@ claude plugins install compound-engineering@every-marketplace
 
 ---
 
+## Philosophy
+
+**Boil the Lake** — When AI makes the marginal cost of review near-zero, do complete reviews instead of sampling. Run the full pipeline. Check everything. Ship with confidence.
+
+---
+
 ## License
 
-Skills are provided as-is. External skills (linked in the table above) maintain their original licenses.
+Skills are provided as-is. External skills (linked above) maintain their original licenses.
