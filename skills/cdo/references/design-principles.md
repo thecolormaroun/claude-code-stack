@@ -1,6 +1,6 @@
 # Design Principles Checklist
 
-Actionable principles from curated sources. Check every design against these.
+Actionable principles from Maroun's vault. Check every design against these.
 
 ---
 

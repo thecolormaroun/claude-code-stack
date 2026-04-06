@@ -5,7 +5,7 @@
 After CPO processing, the project should have:
 
 ```
-./
+~/Projects/[project-name]/
 ├── agents/
 │   └── prd.json              # Ralph loop execution spec
 ├── specs/
@@ -67,7 +67,7 @@ Each story MUST be completable in one `/lfg` iteration:
 Always use `ralph/` prefix for compound engineering compatibility:
 
 ```
-feature/v2-example-improvements
+ralph/v2-noah-noms-improvements
 ralph/v1-initial-build
 ralph/v3-search-and-filters
 ```
@@ -77,7 +77,7 @@ ralph/v3-search-and-filters
 When handing off to Studio, use this format:
 
 ```
-Team New build ready: [Project] V[N]
+@R2StudioBot New build ready: [Project] V[N]
 
 📋 PRD: specs/prd-v[N].md
 🔄 Ralph spec: agents/prd.json ([N] user stories)
@@ -110,6 +110,6 @@ When all stories pass:
 ```markdown
 ## Status: ✅ RALPH_DONE
 Completed: YYYY-MM-DD
-Branch: feature/v2-example-improvements
+Branch: ralph/v2-noah-noms-improvements
 Stories: 8/8 passed
 ```

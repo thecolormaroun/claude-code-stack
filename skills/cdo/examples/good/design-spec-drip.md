@@ -1,4 +1,4 @@
-# Example: Example App Design Spec (Good)
+# Example: Drip v2 Design Spec (Good)
 
 This design spec demonstrates CDO workflow executed well.
 

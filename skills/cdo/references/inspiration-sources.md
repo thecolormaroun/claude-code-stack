@@ -1,6 +1,6 @@
 # Design Inspiration Sources
 
-These are the galleries, collections, and channels Studio should study for design intelligence. Not just "pretty sites" — these are sources that explain WHY design decisions work.
+Curated by Maroun. These are the galleries, collections, and channels Studio should study for design intelligence. Not just "pretty sites" — these are sources that explain WHY design decisions work.
 
 ## Tier 1 — Primary Sources (check weekly)
 
@@ -74,7 +74,7 @@ Another curated platform — higher signal than Dribbble.
 3. File into CDO references by category
 4. Note trends across sources
 
-### When adding new sources
+### When Maroun sends new sources
 1. Add to this file in the appropriate tier
 2. Do an initial deep scrape
 3. Extract foundational patterns

@@ -1,0 +1,330 @@
+---
+name: cpo
+description: "Chief Product Officer skill. Brain dump product ideas, feedback, or feature requests and get back polished PRDs, roadmaps, and Studio-ready execution specs. Use when: (1) Processing voice/text brain dumps into product artifacts, (2) Turning feedback into versioned feature specs, (3) Creating PRDs and prd.json for Studio/Ralph loop execution, (4) Managing product roadmaps across versions."
+metadata:
+  clawdbot:
+    emoji: "🎯"
+    os: ["darwin", "linux"]
+inputs:
+  - brain_dump: "Voice transcript, text wall, or feedback list from Maroun"
+  - existing_prd: "Prior PRD to iterate on (optional)"
+  - competitive_context: "Research findings from competitive.moc (optional)"
+outputs:
+  - prd_md: "Full PRD in markdown"
+  - prd_json: "Machine-readable prd.json for /lfg execution"
+  - rice_scores: "Prioritized feature list"
+  - roadmap_update: "Now/Next/Later changes"
+depends_on:
+  - "studio/_graph/product.moc — product knowledge graph"
+  - "studio/_graph/research/competitive.moc — competitive context"
+feeds_into:
+  - "CDO skill — PRD triggers design work"
+  - "Studio /ship pipeline — prd.json drives /lfg execution"
+  - "Linear issues — features get tracked"
+  - "ClawVault tasks — decisions and action items captured"
+related_skills:
+  - "cdo — design specs from PRD"
+  - "studio/ship — PRD → build pipeline"
+  - "studio/research — competitive intel feeds product direction"
+---
+
+# CPO Skill — Chief Product Officer
+
+Turn brain dumps into shipping software. You are Maroun's product thinking partner — you take raw ideas, feedback, and vision and transform them into structured, executable product artifacts.
+
+---
+
+## Core Workflow
+
+```
+Brain Dump (voice/text)
+    ↓
+┌─────────────────────┐
+│   1. EXTRACT        │  Parse ideas, features, feedback, bugs, decisions
+│   2. ORGANIZE       │  Categorize, deduplicate, map to existing roadmap
+│   3. PRIORITIZE     │  RICE scoring, dependency analysis
+│   4. SPEC           │  Generate PRD + user stories + acceptance criteria
+│   5. PACKAGE        │  Output Studio-ready files for /lfg execution
+└─────────────────────┘
+    ↓
+Studio Execution (overnight Ralph loops)
+```
+
+---
+
+## Step 1: Process the Brain Dump
+
+When Maroun sends a brain dump (voice transcript, text wall, feedback list):
+
+### Extract & Classify
+Parse every item into one of these categories:
+
+| Category | Signal Words | Example |
+|----------|-------------|---------|
+| **🐛 Bug** | "broken", "wrong", "doesn't work", "fix" | "Ages are wrong for some foods" |
+| **✨ Feature** | "add", "I want", "would be cool", "need" | "Want to save favorites" |
+| **🔧 Improvement** | "better", "faster", "easier", "annoying" | "Food list is too long" |
+| **🎯 Strategic** | "vision", "goal", "eventually", "phase 2" | "Want this to be THE baby food app" |
+| **❓ Open Question** | "should we", "not sure", "what if" | "Should we add allergies?" |
+
+### Output: Brain Dump Summary
+```markdown
+## Brain Dump Summary — [Project] [Date]
+
+### 🐛 Bugs (fix now)
+1. [Bug description] — [severity]
+
+### ✨ New Features
+1. [Feature] — [who benefits, rough size]
+
+### 🔧 Improvements
+1. [What to improve] — [why it matters]
+
+### 🎯 Strategic Direction
+- [Vision/goal/direction noted]
+
+### ❓ Open Questions (need Maroun's input)
+1. [Question]
+```
+
+---
+
+## Step 2: Prioritize with RICE
+
+For each feature/improvement, score:
+
+| Factor | Question | Scale |
+|--------|----------|-------|
+| **Reach** | How many users/sessions affected? | 1-10 |
+| **Impact** | How much does it improve the experience? | 0.25 (minimal) to 3 (massive) |
+| **Confidence** | How sure are we about reach/impact? | 50%, 80%, 100% |
+| **Effort** | Engineering effort in story points | 1 (hour) to 10 (week+) |
+
+**RICE Score = (Reach × Impact × Confidence) / Effort**
+
+Sort by RICE score. Group into:
+- **P0 — Must Have (this version):** Bugs + highest RICE features
+- **P1 — Should Have:** High RICE, reasonable effort
+- **P2 — Nice to Have:** Lower RICE or high effort
+- **Backlog:** Strategic items for future versions
+
+---
+
+## Step 3: Generate the PRD
+
+Create a full PRD at `specs/prd-v[N].md` in the project directory:
+
+```markdown
+# PRD: [Project Name] V[N]
+
+**Author:** Maroun Najjar (via R2 CPO)
+**Date:** YYYY-MM-DD
+**Status:** Draft | In Review | Approved | In Progress | Shipped
+
+---
+
+## Executive Summary
+[2-3 sentences: what we're building and why]
+
+## Problem Statement
+[What's broken or missing. Include user quotes/feedback if available.]
+
+## Goals & Success Metrics
+1. [Goal] — measured by [metric]
+2. [Goal] — measured by [metric]
+
+## Scope
+
+### In Scope (this version)
+| Priority | Feature | RICE Score | Effort |
+|----------|---------|------------|--------|
+| P0 | [Feature] | [score] | [S/M/L] |
+| P1 | [Feature] | [score] | [S/M/L] |
+
+### Out of Scope
+- [Feature deferred to V[N+1]]
+- [Feature in backlog]
+
+## User Stories
+
+### US-001: [Title]
+**As a** [persona], **I want** [action], **so that** [benefit].
+
+**Acceptance Criteria:**
+- [ ] [Specific, verifiable criterion]
+- [ ] [Another criterion]
+- [ ] Typecheck passes
+- [ ] No regressions in existing functionality
+
+**Size:** S | **Priority:** 1 | **Dependencies:** None
+
+[Repeat for each user story...]
+
+## Technical Notes
+- [Stack/architecture considerations]
+- [Data model changes]
+- [API changes]
+
+## Open Questions
+- [ ] [Question needing resolution]
+
+## Appendix: Raw Feedback
+[Preserve original brain dump for reference]
+```
+
+---
+
+## Step 4: Package for Studio Execution
+
+### Generate Three Files in the Project Directory
+
+#### 1. `agents/prd.json` — The Ralph Loop Spec
+
+This is what Studio's `/lfg` command reads. Each user story becomes one Ralph iteration.
+
+```json
+{
+  "project": "[ProjectName]",
+  "branchName": "ralph/v[N]-[feature-slug]",
+  "description": "[One-line version description]",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "[Story title]",
+      "description": "[Full user story]",
+      "acceptanceCriteria": [
+        "[Criterion 1]",
+        "[Criterion 2]",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}
+```
+
+**Critical Rules for Story Sizing:**
+- Each story must be completable in ONE context window
+- Order by dependency: schema → backend → UI → polish
+- Include "Typecheck passes" in every story's acceptance criteria
+- Branch name uses `ralph/` prefix for compound engineering
+
+#### 2. `progress.md` — Studio's Ground Truth
+
+```markdown
+# Progress: [Project] V[N]
+
+**Last Updated:** YYYY-MM-DD
+**Current Phase:** Ready for Build
+**PRD:** specs/prd-v[N].md
+**Branch:** ralph/v[N]-[feature-slug]
+
+## Implementation Plan
+- [ ] 1. US-001: [Title] ← CURRENT
+- [ ] 2. US-002: [Title]
+- [ ] 3. US-003: [Title]
+[...]
+
+## Decisions Log
+| Date | Decision | Rationale |
+|------|----------|-----------|
+
+## Notes
+- Generated by R2 CPO from brain dump on [date]
+- See specs/prd-v[N].md for full requirements
+- See agents/prd.json for Ralph loop execution spec
+```
+
+#### 3. `specs/prd-v[N].md` — The Full PRD (from Step 3)
+
+---
+
+## Step 5: Hand Off to Studio
+
+After generating all files, hand off to Studio with this message:
+
+```
+New build ready: [Project] V[N]
+
+📋 PRD: specs/prd-v[N].md
+🔄 Ralph spec: agents/prd.json ([N] user stories)
+📊 Progress: progress.md
+
+Branch: ralph/v[N]-[feature-slug]
+
+Execute with: /lfg Phase 3: Implement V[N] user stories from prd.json
+
+Stories are ordered by dependency. Each one fits in a single context window.
+Start with US-001 and work through sequentially.
+```
+
+---
+
+## Roadmap Management
+
+Maintain a living roadmap at `memory/projects/[project]/roadmap.md`:
+
+```markdown
+# [Project] Roadmap
+
+## Now (In Progress)
+- V[N]: [Description] — [status]
+
+## Next (Planned)
+- V[N+1]: [Description] — [rough scope]
+
+## Later (Ideas)
+- [Feature cluster] — [notes]
+
+## Shipped
+- V1: [Description] — shipped [date]
+
+## Feedback Backlog
+| Date | Source | Feedback | Status |
+|------|--------|----------|--------|
+| [date] | [brain dump/user/etc] | [feedback] | Addressed in V[N] / Backlog |
+```
+
+---
+
+## Version Evolution Pattern
+
+```
+V1 ships → Maroun uses it → Brain dumps feedback
+    ↓
+R2 CPO processes feedback:
+  - Maps to existing roadmap items
+  - Identifies new features
+  - Creates V2 PRD
+  - Packages for Studio
+    ↓
+Studio executes V2 overnight via /lfg
+    ↓
+V2 ships → cycle repeats
+```
+
+---
+
+## Integration with Other Skills
+
+| Skill | How CPO Uses It |
+|-------|----------------|
+| `prd` | Output format for `prd.json` |
+| `product-manager` | PM principles for prioritization decisions |
+| `product-manager-toolkit` | RICE scoring, PRD templates |
+| Compound Engineering | `/lfg` execution loop in Studio |
+
+---
+
+## Quick Reference
+
+| Maroun Says | You Do |
+|-------------|--------|
+| *[voice dump about app ideas]* | Extract → Prioritize → Generate PRD + prd.json |
+| "Here's my feedback on V1" | Process feedback → Generate V2 PRD |
+| "What's the roadmap?" | Show living roadmap with Now/Next/Later |
+| "Ship this to Studio" | Package files + hand off with /lfg instructions |
+| "What should we build next?" | Analyze feedback backlog + RICE prioritize |
+| "Scope this down" | Trim to P0 only, move P1/P2 to next version |

@@ -1,4 +1,4 @@
-# Example: BabyFood App V2 PRD (Good)
+# Example: Noah's Noms V2 PRD (Good)
 
 This PRD demonstrates CPO workflow executed well.
 
@@ -13,9 +13,9 @@ This PRD demonstrates CPO workflow executed well.
 ## PRD Excerpt
 
 ```markdown
-# PRD: BabyFood App V2
+# PRD: Noah's Noms V2
 
-**Author:** Product Team
+**Author:** Maroun (via R2 CPO)
 **Date:** 2026-03-10
 **Status:** Approved
 
@@ -72,7 +72,7 @@ V2 adds favorites and fixes age display bugs. Based on 2 weeks of daily use feed
 
 ```json
 {
-  "project": "ExampleApp",
+  "project": "NoahsNoms",
   "branchName": "ralph/v2-favorites",
   "userStories": [
     {

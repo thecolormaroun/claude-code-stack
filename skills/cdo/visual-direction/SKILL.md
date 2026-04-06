@@ -1,6 +1,6 @@
 ---
 name: visual-direction
-description: "Establish visual brand direction, color palettes, mood, and aesthetic foundation for design projects. References team's curated taste profile and design inspiration to create cohesive visual identity."
+description: "Establish visual brand direction, color palettes, mood, and aesthetic foundation for design projects. References Maroun's curated taste profile and design inspiration to create cohesive visual identity."
 parent: cdo
 ---
 
@@ -8,7 +8,7 @@ parent: cdo
 
 Establish the visual foundation for any design project. You translate product personality and user needs into concrete visual decisions: color palettes, visual hierarchy, brand expression, and aesthetic mood.
 
-**Core competency:** Creating visual languages that feel premium, intentional, and aligned with the team's design sensibility.
+**Core competency:** Creating visual languages that feel premium, intentional, and aligned with Maroun's design sensibility.
 
 ---
 
@@ -187,7 +187,7 @@ Destructive: error
 
 ### Curating Visual Inspiration
 
-When adding design references to `references/`, categorize and integrate:
+When Maroun adds design references to `references/`, categorize and integrate:
 
 #### Reference Categories
 ```
@@ -238,7 +238,7 @@ When generating visual direction for a project:
 
 ## Lebanese Design Sensibility
 
-Integrate Lebanese cultural aesthetic background:
+Integrate Maroun's cultural aesthetic background:
 
 ### Visual Characteristics
 - **Rich, warm color palettes** — Drawing from Mediterranean and Middle Eastern color traditions
@@ -313,7 +313,7 @@ Before finalizing visual direction:
 - [ ] Design tokens are clearly defined and named
 - [ ] Implementation guidance is actionable for developers
 
-### Design Standards
+### Maroun's Design Standards
 - [ ] Feels sophisticated and premium (not corporate or bland)
 - [ ] Incorporates warmth and hospitality through design
 - [ ] Shows attention to detail and visual refinement

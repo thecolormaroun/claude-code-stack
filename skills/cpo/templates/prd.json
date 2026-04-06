@@ -1,0 +1,20 @@
+{
+  "project": "[ProjectName]",
+  "branchName": "ralph/v[N]-[feature-slug]",
+  "description": "[One-line version description]",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "[Story title]",
+      "description": "As a [persona], I want [action], so that [benefit]",
+      "acceptanceCriteria": [
+        "[Criterion 1]",
+        "[Criterion 2]",
+        "Typecheck passes"
+      ],
+      "priority": 1,
+      "passes": false,
+      "notes": ""
+    }
+  ]
+}

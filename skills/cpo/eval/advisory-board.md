@@ -59,7 +59,7 @@ After generating a PRD, run it through these three reviewer personas in parallel
 
 ## Example Review
 
-**Artifact:** BabyFood App V3 PRD — Meal Planning
+**Artifact:** Noah's Noms V3 PRD — Meal Planning
 
 **Shreyas (PM):**
 - 🟡 "No success metric for meal planning — how do we know if it worked?"
