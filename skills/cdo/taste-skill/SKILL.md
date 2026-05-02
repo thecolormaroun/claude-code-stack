@@ -304,6 +304,7 @@ When swapping icons contextually (copy → check, play → pause, expand → col
 ```
 
 *Source: [Jakub Krehel — "Details That Make Interfaces Feel Better"](https://jakubkrehel.com/details-that-make-interfaces-feel-better)*
+- Vault source note: [[Details That Make Interfaces Feel Better]]
 
 ## 10. THE "MOTION-ENGINE" BENTO PARADIGM (formerly §9)
 When generating modern SaaS dashboards or feature sections, you MUST utilize the following "Bento 2.0" architecture and motion philosophy. This goes beyond static cards and enforces a "Vercel-core meets Dribbble-clean" aesthetic heavily reliant on perpetual physics.
